@@ -1,0 +1,19 @@
+.button
+{
+    -fx-background-color : #e10b0e;
+    -fx-background-radius: 50%;
+    -fx-min-width: 150px;
+    -fx-min-height: 150px;
+    -fx-max-width: 150px;
+    -fx-max-height: 150px;
+}
+
+.button1
+{
+    -fx-background-color : #e10b0e;
+    -fx-background-radius: 50%;
+    -fx-min-width: 50px;
+    -fx-min-height: 50px;
+    -fx-max-width: 50px;
+    -fx-max-height: 50px;
+}
