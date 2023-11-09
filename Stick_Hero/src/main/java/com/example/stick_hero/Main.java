@@ -15,7 +15,6 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         try {
             Parent fxml_root = FXMLLoader.load(getClass().getResource("Game_over.fxml"));
-            Group root = new Group();
             Scene scene = new Scene(fxml_root, Color.WHITE);
             Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
             stage.getIcons().add(icon);
