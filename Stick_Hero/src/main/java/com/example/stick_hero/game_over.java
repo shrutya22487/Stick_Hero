@@ -10,6 +10,7 @@ import java.io.IOException;
 
 public class game_over {
     private Stage stage;
+
     private Scene scene;
     private Parent root;
 
