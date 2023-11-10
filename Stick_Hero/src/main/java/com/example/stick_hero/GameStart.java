@@ -21,19 +21,16 @@ public class GameStart{
     private Stage stage;
     private Scene scene;
     private Parent root;
-    @FXML
-    private Circle c;
-    private double x;
-    private double y;
-    @FXML
-    private ImageView imageView;
-    private Image image;
-//    @FXML
-//    private Button b1;
-//    public void up(ActionEvent e){
-//        c.setCenterY(y-=10);
-//    }
-//    public void switch_to_start_screen(ActionEvent event){
-//        FXMLLoader loader = new FXMLLoader(getClass().getResource("start_screen.fxml"));
-//    }
+    public void show_game_start() throws IOException{
+        root = FXMLLoader.load(getClass().getResource("GameStart.fxml"));
+        stage = new Stage();
+        Scene scene = new Scene(root);
+
+        Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
+        stage.getIcons().add(icon);
+        stage.setTitle("Stick Hero");
+        stage.setScene(scene);
+        stage.show();
+
+    }
 }

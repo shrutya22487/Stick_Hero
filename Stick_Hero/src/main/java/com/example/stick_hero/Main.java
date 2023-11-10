@@ -14,15 +14,16 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            Parent fxml_root = FXMLLoader.load(getClass().getResource("Game_over.fxml"));
-            Scene scene = new Scene(fxml_root, Color.WHITE);
-            Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
-            stage.getIcons().add(icon);
-            stage.setWidth(500);
-            stage.setHeight(800);
-            stage.setTitle("Stick Hero");
-            stage.setScene(scene);
-            stage.show();
+//            Parent fxml_root = FXMLLoader.load(getClass().getResource("Game_over.fxml"));
+//            Scene scene = new Scene(fxml_root, Color.WHITE);
+//            Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
+//            stage.getIcons().add(icon);
+//            stage.setWidth(500);
+//            stage.setHeight(800);
+//            stage.setTitle("Stick Hero");
+//            stage.setScene(scene);
+//            stage.show();
+            new game_over().show_game_over();
         }
         catch(Exception e){
             e.printStackTrace();
