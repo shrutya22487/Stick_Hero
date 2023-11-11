@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane blendMode="OVERLAY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.GameStart">
+   <children>
+      <ImageView fx:id="imageView" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bg2.png" />
+         </image>
+         <viewport>
+            <Rectangle2D height="850.0" width="500.0" />
+         </viewport>
+      </ImageView>
+      <Label layoutX="95.0" prefHeight="135.0" prefWidth="292.0" text="STICK" textFill="#535252" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="Microsoft YaHei UI Bold" size="96.0" />
+         </font>
+      </Label>
+      <Label layoutX="109.0" layoutY="106.0" text="HERO" textAlignment="CENTER" textFill="#535252">
+         <font>
+            <Font name="Microsoft YaHei UI Bold" size="90.0" />
+         </font>
+      </Label>
+      <Button layoutX="33.0" layoutY="636.0" maxWidth="59.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" styleClass="button3" stylesheets="@GameStart.css" text="Button" />
+      <Button layoutX="33.0" layoutY="705.0" mnemonicParsing="false" styleClass="button3" stylesheets="@GameStart.css" text="?">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="33.0" layoutY="775.0" mnemonicParsing="false" styleClass="button3" stylesheets="@GameStart.css" text="Volume" />
+      <Button layoutX="399.0" layoutY="636.0" mnemonicParsing="false" styleClass="button3" stylesheets="@GameStart.css" text="No Ads" />
+      <Button layoutX="399.0" layoutY="705.0" mnemonicParsing="false" styleClass="button3" stylesheets="@GameStart.css" text="Heroes" />
+      <Button layoutX="399.0" layoutY="775.0" mnemonicParsing="false" styleClass="button3" stylesheets="@GameStart.css" text="Berries" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d8d91" height="242.0" layoutX="140.0" layoutY="620.0" opacity="0.7" smooth="false" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Button layoutX="155.0" layoutY="350.0" maxHeight="166.0" maxWidth="168.0" mnemonicParsing="false" prefHeight="166.0" prefWidth="168.0" styleClass="button2" stylesheets="@GameStart.css" text="PLAY" textFill="WHITE">
+         <font>
+            <Font name="Microsoft Sans Serif" size="36.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="227.0" layoutY="586.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@hero.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="79.0" layoutY="545.0" mnemonicParsing="false" styleClass="dialogue-button" stylesheets="@GameStart.css" text="Button" />
+      <Button layoutX="114.0" layoutY="661.0" mnemonicParsing="false" text="Button" />
+   </children>
+</AnchorPane>
