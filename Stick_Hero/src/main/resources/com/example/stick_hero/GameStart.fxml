@@ -30,18 +30,18 @@
             <Font name="Microsoft YaHei UI Bold" size="90.0" />
          </font>
       </Label>
-      <Button layoutX="33.0" layoutY="636.0" maxWidth="59.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" styleClass="button1" stylesheets="@CSS.css" text="Button" />
-      <Button layoutX="33.0" layoutY="705.0" mnemonicParsing="false" styleClass="button1" stylesheets="@CSS.css" text="?">
+      <Button layoutX="33.0" layoutY="636.0" maxWidth="59.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" styleClass="button1" stylesheets="@GameStart.css" text="Button" />
+      <Button layoutX="33.0" layoutY="705.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="?">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="33.0" layoutY="775.0" mnemonicParsing="false" styleClass="button1" stylesheets="@CSS.css" text="Volume" />
-      <Button layoutX="399.0" layoutY="636.0" mnemonicParsing="false" styleClass="button1" stylesheets="@CSS.css" text="No Ads" />
-      <Button layoutX="399.0" layoutY="705.0" mnemonicParsing="false" styleClass="button1" stylesheets="@CSS.css" text="Heroes" />
-      <Button layoutX="399.0" layoutY="775.0" mnemonicParsing="false" styleClass="button1" stylesheets="@CSS.css" text="Berries" />
+      <Button layoutX="33.0" layoutY="775.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="Volume" />
+      <Button layoutX="399.0" layoutY="636.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="No Ads" />
+      <Button layoutX="399.0" layoutY="705.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="Heroes" />
+      <Button layoutX="399.0" layoutY="775.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="Berries" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a1a1b" height="242.0" layoutX="140.0" layoutY="620.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-      <Button layoutX="155.0" layoutY="350.0" maxHeight="166.0" maxWidth="168.0" mnemonicParsing="false" prefHeight="166.0" prefWidth="168.0" stylesheets="@CSS.css" text="PLAY" textFill="#faf6f6">
+      <Button layoutX="155.0" layoutY="350.0" maxHeight="166.0" maxWidth="168.0" mnemonicParsing="false" prefHeight="166.0" prefWidth="168.0" stylesheets="@GameStart.css" text="PLAY" textFill="#faf6f6">
          <font>
             <Font name="Microsoft Sans Serif" size="36.0" />
          </font>
