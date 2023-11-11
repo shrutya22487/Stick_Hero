@@ -31,6 +31,5 @@ public class GameStart{
         stage.setTitle("Stick Hero");
         stage.setScene(scene);
         stage.show();
-
     }
 }
