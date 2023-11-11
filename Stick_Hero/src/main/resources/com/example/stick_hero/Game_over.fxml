@@ -49,6 +49,6 @@
          </image>
       </ImageView>
       <Button alignment="CENTER" defaultButton="true" layoutX="326.0" layoutY="453.0" mnemonicParsing="false" opacity="0.0" prefHeight="70.0" prefWidth="70.0" text="Button" />
-      <Button layoutX="87.0" layoutY="453.0" mnemonicParsing="false" onAction="#switch_to_start_screen" opacity="0.0" prefHeight="70.0" prefWidth="70.0" text="Button" />
+      <Button layoutX="87.0" layoutY="453.0" mnemonicParsing="false" onAction="#go_to_home" opacity="0.0" prefHeight="70.0" prefWidth="70.0" text="Button" />
    </children>
 </AnchorPane>
