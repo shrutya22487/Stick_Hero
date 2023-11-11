@@ -25,11 +25,21 @@ public class GameStart{
         root = FXMLLoader.load(getClass().getResource("GameStart.fxml"));
         stage = new Stage();
         Scene scene = new Scene(root);
-
         Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
         stage.getIcons().add(icon);
         stage.setTitle("Stick Hero");
         stage.setScene(scene);
         stage.show();
     }
+
+    public void tutorial() throws IOException{
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("TutorialPopup.fxml"))));
+        stage.show();
+    }
+
+//    public void berriesBuy() throws IOException{
+//        Scene scene1 =
+//    }
+
+
 }
