@@ -25,7 +25,6 @@ public class GameStart{
         root = FXMLLoader.load(getClass().getResource("GameStart.fxml"));
         stage = new Stage();
         Scene scene = new Scene(root);
-
         Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
         stage.getIcons().add(icon);
         stage.setTitle("Stick Hero");

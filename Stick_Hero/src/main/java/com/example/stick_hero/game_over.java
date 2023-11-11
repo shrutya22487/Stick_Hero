@@ -25,7 +25,7 @@ public class game_over {
         stage.setScene(scene);
         stage.show();
     }
-    public void switch_to_start_screen(ActionEvent event) throws IOException{
+    public void go_to_home(ActionEvent event) throws IOException{
         new GameStart().show_game_start();
         Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         currentStage.close();
