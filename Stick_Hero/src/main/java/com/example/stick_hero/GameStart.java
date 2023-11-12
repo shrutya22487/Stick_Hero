@@ -17,7 +17,6 @@ import java.io.IOException;
 import static javafx.application.Application.launch;
 
 public class GameStart{
-    @FXML
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -31,11 +30,16 @@ public class GameStart{
         stage.setScene(scene);
         stage.show();
     }
-
-    public void tutorial() throws IOException{
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("TutorialPopup.fxml"))));
-        stage.show();
+    public void show_Runner(ActionEvent event) throws IOException{
+        new Runner().show_Runner();
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        currentStage.close();
     }
+
+//    public void tutorial() throws IOException{
+//        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("TutorialPopup.fxml"))));
+//        stage.show();
+//    }
 
 //    public void berriesBuy() throws IOException{
 //        Scene scene1 =
