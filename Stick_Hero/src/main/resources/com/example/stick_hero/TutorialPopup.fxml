@@ -11,7 +11,7 @@
 
 <AnchorPane blendMode="OVERLAY" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.GameStart">
    <children>
-      <ImageView fx:id="imageView" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+      <ImageView opacity="0.35" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bg2.png" />
          </image>
@@ -50,7 +50,7 @@
             <Image url="@hero.png" />
          </image>
       </ImageView>
-      <Button layoutX="79.0" layoutY="545.0" mnemonicParsing="false" styleClass="dialogue-button" stylesheets="@GameStart.css" text="Button" />
+      <Button layoutX="114.0" layoutY="615.0" mnemonicParsing="false" onAction="#exit" styleClass="dialogue-button" text="Back" />
       <Button layoutX="114.0" layoutY="661.0" mnemonicParsing="false" text="Button" />
    </children>
 </AnchorPane>

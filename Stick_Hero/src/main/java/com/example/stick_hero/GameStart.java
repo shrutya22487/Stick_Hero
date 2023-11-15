@@ -32,14 +32,19 @@ public class GameStart{
         stage.show();
     }
 
-    public void tutorial() throws IOException{
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("TutorialPopup.fxml"))));
+    public void tutorial(ActionEvent event) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("TutorialPopup.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
         stage.show();
     }
 
-//    public void berriesBuy() throws IOException{
-//        Scene scene1 =
-//    }
-
-
+    public void exit(ActionEvent event) throws IOException{
+        root = FXMLLoader.load(getClass().getResource("GameStart.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
