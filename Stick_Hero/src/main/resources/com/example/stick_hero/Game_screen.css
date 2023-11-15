@@ -1,0 +1,51 @@
+.button
+{
+    -fx-background-color : #e10b0e;
+    -fx-background-radius: 50%;
+    -fx-min-width: 150px;
+    -fx-min-height: 150px;
+    -fx-max-width: 150px;
+    -fx-max-height: 150px;
+}
+
+.button1
+{
+    -fx-background-color : #e10b0e;
+    -fx-background-radius: 50%;
+    -fx-min-width: 50px;
+    -fx-min-height: 50px;
+    -fx-max-width: 50px;
+    -fx-max-height: 50px;
+}
+
+.button2
+{
+    -fx-background-color : #cf5d5d;
+    -fx-background-radius: 50%;
+    -fx-min-width: 150px;
+    -fx-min-height: 150px;
+    -fx-max-width: 150px;
+    -fx-max-height: 150px;
+}
+
+.button3
+{
+    -fx-background-color : #cf5d5d;
+    -fx-background-radius: 50%;
+    -fx-min-width: 50px;
+    -fx-min-height: 50px;
+    -fx-max-width: 50px;
+    -fx-max-height: 50px;
+}
+
+.dialogue-button {
+    -fx-background-color: #3498db;
+    -fx-text-alignment: center;
+    -fx-content-display: inline-block;
+    -fx-font-size: 16px;
+    -fx-label-padding: 10px 20px;
+    -fx-border-radius: 4px;
+    -fx-position-shape: relative;
+    overflow: hidden;
+}
+
