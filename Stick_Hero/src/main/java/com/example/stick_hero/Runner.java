@@ -15,7 +15,7 @@ import javafx.util.Duration;
 public class Runner {
     private Stage stage;
     private Scene scene;
-    private Parent root = FXMLLoader.load(getClass().getResource("Runner.fxml"));
+    private Parent root = FXMLLoader.load(getClass().getResource("Game_screen.fxml"));
     Image hero1 = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
 
     @FXML

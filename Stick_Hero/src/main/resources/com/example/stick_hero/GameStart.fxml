@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.GameStart">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.Start_screen">
    <children>
       <ImageView fx:id="imageView" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -30,17 +30,17 @@
          </font>
       </Label>
       <Button layoutX="33.0" layoutY="636.0" maxWidth="59.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" styleClass="button1" stylesheets="@GameStart.css" text="Button" />
-      <Button layoutX="33.0" layoutY="705.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="?">
+      <Button layoutX="33.0" layoutY="705.0" mnemonicParsing="false" onAction="#show_tutorial" styleClass="button1" stylesheets="@GameStart.css" text="?">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Button>
-      <Button layoutX="33.0" layoutY="775.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="Volume" />
+      <Button layoutX="33.0" layoutY="775.0" mnemonicParsing="false" onAction="#mute" styleClass="button1" stylesheets="@GameStart.css" text="Volume" />
       <Button layoutX="399.0" layoutY="636.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="No Ads" />
-      <Button layoutX="399.0" layoutY="705.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="Heroes" />
-      <Button layoutX="399.0" layoutY="775.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="Berries" />
+      <Button layoutX="399.0" layoutY="705.0" mnemonicParsing="false" onAction="#buy_avatar" styleClass="button1" stylesheets="@GameStart.css" text="Heroes" />
+      <Button layoutX="399.0" layoutY="775.0" mnemonicParsing="false" onAction="#buy_cherries" styleClass="button1" stylesheets="@GameStart.css" text="Cherries" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a1a1b" height="242.0" layoutX="140.0" layoutY="620.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-      <Button layoutX="155.0" layoutY="350.0" maxHeight="166.0" maxWidth="168.0" mnemonicParsing="false" onAction="#show_Runner" prefHeight="166.0" prefWidth="168.0" stylesheets="@GameStart.css" text="PLAY" textFill="#faf6f6">
+      <Button layoutX="155.0" layoutY="350.0" maxHeight="166.0" maxWidth="168.0" mnemonicParsing="false" onAction="#run_game" prefHeight="166.0" prefWidth="168.0" stylesheets="@GameStart.css" text="PLAY" textFill="#faf6f6">
          <font>
             <Font name="Microsoft Sans Serif" size="36.0" />
          </font>

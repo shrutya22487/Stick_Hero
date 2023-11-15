@@ -14,7 +14,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            new game_over().show_game_over();
+            //will load start screen here
         }
         catch(Exception e){
             e.printStackTrace();

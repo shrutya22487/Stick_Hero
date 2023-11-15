@@ -4,24 +4,25 @@ import javafx.scene.image.Image;
 
 public class Avatar {
     private Image standing1, standing2, run1, run2, run3;
-    private int cherries, best_score;
+    private int cost;
+    private boolean bought;
 
-    public Avatar(String standing1, String standing2, String run1, String run2, String run3) {
-        this.standing1 = new Image(getClass().getResourceAsStream(standing1));
-        this.standing2 = new Image(getClass().getResourceAsStream(standing2));
-        this.run1 = new Image(getClass().getResourceAsStream(run1));
-        this.run2 = new Image(getClass().getResourceAsStream(run2));
-        this.run3 = new Image(getClass().getResourceAsStream(run3));
-        this.cherries = 0;
-        this.best_score = 0;
+    public Avatar(Image standing1, Image standing2, Image run1, Image run2, Image run3, int cost, boolean bought) {
+        this.standing1 = standing1;
+        this.standing2 = standing2;
+        this.run1 = run1;
+        this.run2 = run2;
+        this.run3 = run3;
+        this.cost = cost;
+        this.bought = bought;
     }
 
-    public void setCherries(int cherries) {
-        this.cherries = cherries;
+    public void setCost(int cost) {
+        this.cost = cost;
     }
 
-    public void setBest_score(int best_score) {
-        this.best_score = best_score;
+    public void setBought(boolean bought) {
+        this.bought = bought;
     }
 
     public Image getStanding1() {
@@ -44,11 +45,11 @@ public class Avatar {
         return run3;
     }
 
-    public int getCherries() {
-        return cherries;
+    public int getCost() {
+        return cost;
     }
 
-    public int getBest_score() {
-        return best_score;
+    public boolean isBought() {
+        return bought;
     }
 }
