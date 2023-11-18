@@ -3,13 +3,11 @@ package com.example.stick_hero;
 import java.io.*;
 public class Profile implements Serializable {
     private String username;
-    private String password;
     private int berries;
     private Avatar av1;
     private int highScore;
     public Profile(String username, String password, int berries, Avatar av1, int highScore) {
         this.username = username;
-        this.password = password;
         this.berries = berries;
         this.av1 = av1;
         this.highScore = highScore;
@@ -22,10 +20,6 @@ public class Profile implements Serializable {
         return username;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
     public Avatar getAv1() {
         return av1;
     }
@@ -35,10 +29,6 @@ public class Profile implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public void setBerries(int berries) {

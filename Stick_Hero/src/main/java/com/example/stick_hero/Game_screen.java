@@ -1,10 +1,16 @@
 package com.example.stick_hero;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 
 public class Game_screen extends Menu{
     private int curr_score;
+    @FXML
+    private Rectangle rectangle = new Rectangle(2, 2, Color.BLACK);
+    private int y;
 
     public Game_screen(int cherries, Image background, Avatar avatar) {
         super(cherries, background);
@@ -19,10 +25,10 @@ public class Game_screen extends Menu{
     public void generate_stick(ActionEvent event){
         //to generate stick
     }
-    public void death(){
+    public boolean death(){
         //will instantiate the game_over screen if player dies
     }
+    public void run(){
+    }
     //put random generating blocks and cherries here
-
-
 }

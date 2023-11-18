@@ -21,9 +21,6 @@ public class Runner {
     private Parent root = FXMLLoader.load(getClass().getResource("Game_screen.fxml"));
     Image hero1 = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
     @FXML
-    private Rectangle rectangle = new Rectangle(2, 2, Color.BLACK);
-    private int y;
-    @FXML
     ImageView avatar_holder;
     public void show_Runner() throws IOException {
         avatar_holder.setImage(hero1);
@@ -37,6 +34,4 @@ public class Runner {
         stage.show();
     }
 
-    public void stick_grow(EventHandler event){
-    }
 }

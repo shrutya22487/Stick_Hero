@@ -32,6 +32,4 @@ public class Start_screen extends Menu{
     public void mute(ActionEvent event){
         // is going to mute sound
     }
-
-
 }

@@ -31,7 +31,6 @@ public class GameStart{
         stage.setScene(scene);
         stage.show();
     }
-
     public void tutorial(ActionEvent event) throws IOException{
         root = FXMLLoader.load(getClass().getResource("TutorialPopup.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
