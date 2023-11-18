@@ -17,6 +17,7 @@ public class BeginScreen {
     public void viewProfile(EventHandler event){
     }
     public void profileSelect(EventHandler event){
+        new Start_screen();
     }
     public void exit(EventHandler event) {
     }
@@ -29,6 +30,7 @@ public class BeginScreen {
         stage.setTitle("Stick Hero");
         stage.setScene(scene);
         stage.show();
+
     }
 
 }
