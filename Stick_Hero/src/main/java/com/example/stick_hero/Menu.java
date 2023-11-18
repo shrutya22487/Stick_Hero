@@ -11,4 +11,12 @@ public abstract class Menu {
         Background = background;
     }
 
+    public int getCherries() {
+        return Cherries;
+    }
+
+    public Image getBackground() {
+        return Background;
+    }
+
 }

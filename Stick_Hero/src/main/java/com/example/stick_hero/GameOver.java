@@ -18,6 +18,7 @@ public class GameOver extends Menu{
         //to go back to home
     }
     public void restart_game(ActionEvent event){
+        new Game_screen();
         //to restart the game
     }
 
