@@ -27,6 +27,7 @@ public class Game_screen extends Menu{
     }
     public boolean death(){
         //will instantiate the game_over screen if player dies
+        new GameOver();
     }
     public void run(){
     }

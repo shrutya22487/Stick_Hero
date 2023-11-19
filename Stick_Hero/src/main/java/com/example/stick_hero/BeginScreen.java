@@ -13,6 +13,7 @@ public class BeginScreen {
     Scene scene;
     Stage stage;
     public void createProfile(EventHandler event){
+        Profile profile = new Profile();
     }
     public void viewProfile(EventHandler event){
     }
