@@ -58,5 +58,6 @@
             <Font size="25.0" />
          </font>
       </Label>
+      <Label layoutX="139.0" layoutY="126.0" prefHeight="135.0" prefWidth="167.0" text="Label" textAlignment="CENTER" />
    </children>
 </AnchorPane>

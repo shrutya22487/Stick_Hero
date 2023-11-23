@@ -34,7 +34,6 @@ public class BeginScreen {
         stage.setFullScreen(true);
         stage.setScene(scene);
         stage.show();
-
     }
 
 }
