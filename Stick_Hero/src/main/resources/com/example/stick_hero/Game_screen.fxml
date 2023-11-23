@@ -9,14 +9,13 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="850.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.Game_screen">
+<AnchorPane prefHeight="850.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.RunnerController">
    <children>
       <ImageView fitHeight="850.0" fitWidth="500.0" pickOnBounds="true">
          <image>
             <Image url="@bg2.png" />
          </image>
       </ImageView>
-      <Button layoutX="-1.0" mnemonicParsing="false" onAction="#generate_stick" opacity="0.0" prefHeight="850.0" prefWidth="500.0" />
       <Rectangle arcHeight="10.0" arcWidth="10.0" height="204.0" layoutY="646.0" stroke="BLACK" strokeType="INSIDE" width="122.0">
          <effect>
             <Blend mode="RED" />
@@ -37,7 +36,7 @@
             <Blend mode="RED" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" height="204.0" layoutX="122.0" layoutY="442.0" stroke="BLACK" strokeType="INSIDE" width="8.0">
+      <Rectangle fx:id="rectangle" arcHeight="10.0" arcWidth="10.0" height="204.0" layoutX="122.0" layoutY="442.0" stroke="BLACK" strokeType="INSIDE" width="8.0">
          <effect>
             <Blend mode="RED" />
          </effect>
@@ -58,6 +57,5 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="139.0" layoutY="126.0" prefHeight="135.0" prefWidth="167.0" text="Label" textAlignment="CENTER" />
    </children>
 </AnchorPane>
