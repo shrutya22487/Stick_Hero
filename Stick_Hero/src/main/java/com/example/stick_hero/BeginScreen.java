@@ -35,5 +35,4 @@ public class BeginScreen {
         stage.setScene(scene);
         stage.show();
     }
-
 }
