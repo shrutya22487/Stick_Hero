@@ -15,7 +15,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         try {
             //will load start screen here
-            new Start_screen().show_screen(stage);
+            new BeginScreen().show_begin_screen(stage);
         }
         catch(Exception e){
             e.printStackTrace();

@@ -19,17 +19,17 @@
             <Font name="Microsoft YaHei Bold" size="96.0" />
          </font>
       </Label>
-      <Button layoutX="201.0" layoutY="533.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="338.0" styleClass="button5" stylesheets="@BeginingScreen.css" text="CHOOSE PROFILE">
+      <Button layoutX="201.0" layoutY="533.0" mnemonicParsing="false" onAction="#choose_profile" prefHeight="133.0" prefWidth="338.0" styleClass="button5" stylesheets="@BeginingScreen.css" text="CHOOSE PROFILE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="201.0" layoutY="685.0" mnemonicParsing="false" prefHeight="126.0" prefWidth="338.0" stylesheets="@BeginingScreen.css" text="CREATE PROFILE">
+      <Button layoutX="201.0" layoutY="685.0" mnemonicParsing="false" onAction="#createProfile" prefHeight="126.0" prefWidth="338.0" stylesheets="@BeginingScreen.css" text="CREATE PROFILE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="199.0" layoutY="837.0" mnemonicParsing="false" prefHeight="122.0" prefWidth="338.0" stylesheets="@BeginingScreen.css" text="EXIT GAME">
+      <Button layoutX="199.0" layoutY="837.0" mnemonicParsing="false" onAction="#exit" prefHeight="122.0" prefWidth="338.0" stylesheets="@BeginingScreen.css" text="EXIT GAME">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

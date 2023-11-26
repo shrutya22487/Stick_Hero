@@ -5,24 +5,31 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Game_screen extends Menu {
+public class Game_screen{
+    Stage stage;
+    Parent root;
+    Scene scene;
+    private Profile profile;
     private int curr_score;
     int i=0;
 
-    public Game_screen(int cherries, Image background, Avatar avatar) {
-        super(cherries, background);
+    public Game_screen(Profile profile) {
         this.curr_score = 0;
+        this.profile = profile;
     }
 
     public void generate_random_block(ActionEvent event){
@@ -42,4 +49,15 @@ public class Game_screen extends Menu {
     public void run(ActionEvent event){
     }
     //put random generating blocks and cherries here
+    public void show_game_screen( Stage stage ) throws IOException {
+        this.stage = stage;
+        root = FXMLLoader.load(getClass().getResource("Game_screen.fxml"));
+        scene = new Scene(root);
+        Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
+        this.stage.getIcons().add(icon);
+        this.stage.setTitle("Stick Hero");
+        this.stage.setFullScreen(true);
+        this.stage.setScene(scene);
+        this.stage.show();
+    }
 }
