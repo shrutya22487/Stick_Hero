@@ -27,8 +27,10 @@ public class Game_screen{
     private int curr_score;
     int i=0;
 
-    public Game_screen(Profile profile) {
+    public Game_screen() {
         this.curr_score = 0;
+    }
+    public void setProfile(Profile profile) {
         this.profile = profile;
     }
 
@@ -48,16 +50,5 @@ public class Game_screen{
     }
     public void run(ActionEvent event){
     }
-    //put random generating blocks and cherries here
-    public void show_game_screen( Stage stage ) throws IOException {
-        this.stage = stage;
-        root = FXMLLoader.load(getClass().getResource("Game_screen.fxml"));
-        scene = new Scene(root);
-        Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
-        this.stage.getIcons().add(icon);
-        this.stage.setTitle("Stick Hero");
-        this.stage.setFullScreen(true);
-        this.stage.setScene(scene);
-        this.stage.show();
-    }
+
 }
