@@ -21,7 +21,7 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" height="204.0" layoutY="646.0" stroke="BLACK" strokeType="INSIDE" width="122.0">
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#434040" height="204.0" layoutY="646.0" stroke="BLACK" strokeType="INSIDE" width="122.0">
          <effect>
             <Blend mode="RED" />
          </effect>
@@ -31,17 +31,17 @@
             <Image url="@cherry.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="43.0" fitWidth="33.0" layoutX="96.0" layoutY="612.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageView" fitHeight="43.0" fitWidth="33.0" layoutX="96.0" layoutY="612.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@hero.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="10.0" arcWidth="10.0" height="204.0" layoutX="276.0" layoutY="646.0" stroke="BLACK" strokeType="INSIDE" width="122.0">
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#434040" height="204.0" layoutX="276.0" layoutY="646.0" stroke="BLACK" strokeType="INSIDE" width="122.0">
          <effect>
             <Blend mode="RED" />
          </effect>
       </Rectangle>
-      <Rectangle fx:id="rectangle" arcHeight="10.0" arcWidth="10.0" height="204.0" layoutX="122.0" layoutY="442.0" stroke="BLACK" strokeType="INSIDE" width="5.0">
+      <Rectangle fx:id="rectangle" arcHeight="10.0" arcWidth="10.0" height="197.0" layoutX="119.0" layoutY="451.0" stroke="BLACK" strokeType="INSIDE" width="5.0">
          <effect>
             <Blend mode="RED" />
          </effect>
@@ -57,6 +57,6 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button layoutX="2.0" mnemonicParsing="false" onAction="#stickGrow" opacity="0.0" prefHeight="850.0" prefWidth="500.0" text="Button" textFill="#4b4040" underline="true" wrapText="true" />
+      <Button layoutX="1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#stickGrow" opacity="0.0" prefHeight="850.0" prefWidth="500.0" text="Button" textFill="#4b4040" underline="true" wrapText="true" />
    </children>
 </AnchorPane>
