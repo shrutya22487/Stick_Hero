@@ -59,7 +59,4 @@ public class profile_select {
         if (file.exists()) button_profile_3.setText("Game_1");
         else button_profile_3.setText("New Game");
     }
-
-
-
 }

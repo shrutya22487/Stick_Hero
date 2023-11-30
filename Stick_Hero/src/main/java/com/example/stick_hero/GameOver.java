@@ -32,4 +32,8 @@ public class GameOver extends Menu{
         currentScore.setText(String.valueOf(curr_score));
         bestScore.setText(String.valueOf(best_score));
     }
+
+    public static void showGameOverScreen(){
+    }
+
 }

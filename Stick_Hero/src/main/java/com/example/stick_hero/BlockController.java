@@ -1,9 +1,10 @@
 package com.example.stick_hero;
 
-import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 
@@ -12,24 +13,27 @@ import java.util.ResourceBundle;
 import java.util.Random;
 
 public class BlockController implements Initializable {
-
-    private Rectangle block;
     Random r = new Random();
-    private int length = r.nextInt(0, 500);
-    private int width = r.nextInt(0, 250);
+    private int length = r.nextInt(10, 600);
+    private int width = r.nextInt(10, 250);
     private int x=500;
+    @FXML
+    private Rectangle blockNew;
+    private Rectangle blockOld;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        block.setX(length);
-        block.setHeight(204);
-        block.setWidth(width);
+        blockNew.setHeight(204);
+        blockNew.setX(1000);
+        blockNew.setY(300);
+        blockNew.setWidth(width);
+        blockNew.setFill(Color.BLACK);
 
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(5), e->{
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(10), e->{
             this.x-=1;
-            block.setX(this.x);
+            blockNew.setX(this.x);
         }));
 
-        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.setCycleCount(length);
         timeline.play();
     }
 }

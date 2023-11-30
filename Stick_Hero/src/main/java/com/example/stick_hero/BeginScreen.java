@@ -45,7 +45,6 @@ public class BeginScreen {
         catch (Exception e){
             e.printStackTrace();
         }
-
     }
     @FXML
     public void exit(ActionEvent event) {
