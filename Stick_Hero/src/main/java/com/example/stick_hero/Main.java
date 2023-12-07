@@ -19,9 +19,12 @@ public class Main extends Application {
             FXMLLoader fxml_loader =  new FXMLLoader(getClass().getResource("BeginScreen.fxml"));
             Scene scene = new Scene( fxml_loader.load() );
             Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
+            BeginScreen bs = fxml_loader.getController();
+            bs.random_background();
+            stage.setResizable(false);
             stage.getIcons().add(icon);
             stage.setTitle("Stick Hero");
-            stage.setFullScreen(true);
+//            stage.setFullScreen(true);
             stage.setScene(scene);
             stage.show();
         }

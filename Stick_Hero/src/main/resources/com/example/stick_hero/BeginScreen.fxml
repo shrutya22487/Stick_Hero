@@ -7,29 +7,29 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.BeginScreen">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.BeginScreen">
    <children>
-      <ImageView fitHeight="970.0" fitWidth="722.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bg" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@bg2.png" />
          </image>
       </ImageView>
-      <Label layoutX="60.0" layoutY="54.0" prefHeight="218.0" prefWidth="608.0" text="STICK HERO">
+      <Label layoutX="96.0" prefHeight="218.0" prefWidth="608.0" text="STICK HERO">
          <font>
             <Font name="Microsoft YaHei Bold" size="96.0" />
          </font>
       </Label>
-      <Button layoutX="201.0" layoutY="533.0" mnemonicParsing="false" onAction="#choose_profile" prefHeight="133.0" prefWidth="338.0" styleClass="button5" stylesheets="@BeginingScreen.css" text="CHOOSE PROFILE">
+      <Button layoutX="286.0" layoutY="199.0" mnemonicParsing="false" onAction="#new_game" prefHeight="70.0" prefWidth="230.0" styleClass="button5" stylesheets="@BeginingScreen.css" text="NEW GAME">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="201.0" layoutY="685.0" mnemonicParsing="false" onAction="#createProfile" prefHeight="126.0" prefWidth="338.0" stylesheets="@BeginingScreen.css" text="CREATE PROFILE">
+      <Button layoutX="286.0" layoutY="300.0" mnemonicParsing="false" onAction="#choose_profile" prefHeight="70.0" prefWidth="230.0" stylesheets="@BeginingScreen.css" text="CHOOSE_PROFILE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="199.0" layoutY="837.0" mnemonicParsing="false" onAction="#exit" prefHeight="122.0" prefWidth="338.0" stylesheets="@BeginingScreen.css" text="EXIT GAME">
+      <Button layoutX="286.0" layoutY="391.0" mnemonicParsing="false" onAction="#exit" prefHeight="70.0" prefWidth="230.0" stylesheets="@BeginingScreen.css" text="EXIT GAME">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

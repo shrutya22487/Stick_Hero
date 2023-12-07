@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 
-public class GameOver extends Menu{
+public class GameOver{
     private int best_score, curr_score;
     private Image home, restart;
     @FXML
@@ -13,13 +13,6 @@ public class GameOver extends Menu{
     @FXML
     private Label bestScore;
 
-    public GameOver(int cherries, Image background, int best_score, int curr_score, Image home, Image restart) {
-        super(cherries, background);
-        this.best_score = best_score;
-        this.curr_score = curr_score;
-        this.home = home;
-        this.restart = restart;
-    }
     public void go_to_home(ActionEvent event){
         //new Start_screen();
         //to go back to home
