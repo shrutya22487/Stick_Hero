@@ -12,7 +12,7 @@ public class TestRunner extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("Game_screen.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Game_screen2.fxml"));
 //            Parent root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
             Scene scene = new Scene(root);
             TestRunner.stage = stage;

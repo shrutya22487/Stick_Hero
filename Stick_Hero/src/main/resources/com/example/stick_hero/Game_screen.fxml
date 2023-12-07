@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="850.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.StickController">
+<AnchorPane fx:id="pane" prefHeight="850.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.StickController2">
    <children>
       <ImageView fitHeight="850.0" fitWidth="502.0" layoutX="-2.0" pickOnBounds="true">
          <image>
@@ -57,6 +57,6 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button layoutY="-1.0" mnemonicParsing="false" onAction="#stickGrow" opacity="0.0" prefHeight="850.0" prefWidth="500.0" text="Button" textFill="#4b4040" underline="true" wrapText="true" />
+      <Button layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#screenClick" onMousePressed="#stickGrow" onMouseReleased="#stickStop" opacity="0.0" prefHeight="850.0" prefWidth="500.0" text="Button" textFill="#4b4040" underline="true" wrapText="true" />
    </children>
 </AnchorPane>
