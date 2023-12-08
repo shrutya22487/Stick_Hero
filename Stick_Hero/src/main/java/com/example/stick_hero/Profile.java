@@ -15,12 +15,21 @@ public class Profile implements Serializable {
         return curr_score;
     }
 
-    public void increase_cherries(){
-        cherries++;
-    }
 
     public int getCherries() {
         return cherries;
+    }
+
+    public void setCherries(int cherries) {
+        this.cherries = cherries;
+    }
+
+    public void setHighScore(int highScore) {
+        this.highScore = highScore;
+    }
+
+    public void setCurr_score(int curr_score) {
+        this.curr_score = curr_score;
     }
 
     public int getHighScore() {

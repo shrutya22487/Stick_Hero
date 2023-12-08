@@ -11,6 +11,7 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -60,9 +61,7 @@ public class StickController2 extends Menu implements Initializable {
     @FXML
     private Rectangle blockAfter;
     @FXML
-    private ImageView cherry;
-    @FXML
-    private Text cherryCountText = new Text();
+    Label curr_score;
     private Rectangle blockNew;
     private Rectangle stickNew;
     private int freq1=0;
@@ -158,6 +157,9 @@ public class StickController2 extends Menu implements Initializable {
     }
 
     public void runWin(){
+        increase_currscore();
+        curr_score.setText(String.valueOf(get_profile().getCurr_score()));
+
         int a = (int) (blockAfter.getX()+blockAfter.getWidth()-blockPrevious.getWidth());
         timeline3_1.setCycleCount(a);
         timeline3_1.play();
@@ -179,7 +181,8 @@ public class StickController2 extends Menu implements Initializable {
                 try {
                     if (!bool_mute) game_media_player.dispose();
 
-                    load_fxml("Game_over.fxml");
+                    GameOver gameOver = (GameOver) load_fxml("Game_over.fxml");
+                    gameOver.displayScore();
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }

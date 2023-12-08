@@ -58,5 +58,16 @@
          </font>
       </Label>
       <Button layoutY="-1.0" mnemonicParsing="false" onMouseClicked="#screenClick" onMousePressed="#stickGrow" onMouseReleased="#stickStop" opacity="0.0" prefHeight="850.0" prefWidth="500.0" text="Button" textFill="#4b4040" underline="true" wrapText="true" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="740.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cherry.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="42.0" layoutX="710.0" layoutY="115.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+      <Label fx:id="cherry_count" layoutX="719.0" layoutY="122.0" text="0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

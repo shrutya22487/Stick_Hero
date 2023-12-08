@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -23,8 +24,7 @@ public class Start_screen extends Menu{
     private Avatar avatar;
     @FXML
     public void run_game(ActionEvent event) throws IOException {
-
-        load_fxml("Game_screen2.fxml");
+        StickController2 stickController2 = (StickController2) load_fxml("Game_screen2.fxml");
     }
     public void show_tutorial(ActionEvent event){
         // the labels for tutorials that are going to pop up

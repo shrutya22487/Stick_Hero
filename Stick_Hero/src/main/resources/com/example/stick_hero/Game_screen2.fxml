@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<?import javafx.scene.shape.Circle?>
 <AnchorPane fx:id="pane" prefHeight="850.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.StickController2">
    <children>
       <ImageView fx:id="bg" fitHeight="850.0" fitWidth="502.0" layoutX="-2.0" pickOnBounds="true">
@@ -34,17 +34,29 @@
             <Image url="@run2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true" x="442.0" y="14.0">
+      <Circle fill="#c41111" layoutX="755.0" layoutY="49.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="mute_image" fitHeight="60.0" fitWidth="60.0" layoutX="725.0" layoutY="20.0" onMouseClicked="#Mute" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="740.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@cherry.png" />
          </image>
       </ImageView>
-      <Text layoutX="397.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Test" textOrigin="CENTER" wrappingWidth="59.60003662109375">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="42.0" layoutX="710.0" layoutY="115.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="113.0" layoutX="373.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+      <Label fx:id="cherry_count" layoutX="719.0" layoutY="122.0" text="0">
          <font>
-            <Font size="24.0" />
+            <Font name="System Bold" size="18.0" />
          </font>
-      </Text>
-      <Circle fill="#c41111" layoutX="755.0" layoutY="49.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-      <ImageView fx:id="mute_image" fitHeight="60.0" fitWidth="60.0" layoutX="725.0" layoutY="20.0" onMouseClicked="#Mute" pickOnBounds="true" preserveRatio="true" />
+      </Label>
+      <Label fx:id="curr_score" layoutX="416.0" layoutY="84.0" text="0">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="384.0" layoutY="26.0" text="Current &#10;Score" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

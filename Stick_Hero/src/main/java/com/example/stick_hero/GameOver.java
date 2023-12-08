@@ -13,9 +13,10 @@ public class GameOver extends Menu{
     @FXML
     private Label currentScore;
     @FXML
-    private Label bestScore;
+    private Label BestScore;
     @FXML
-
+    Label cherry_count;
+    @FXML
     public void go_to_home(ActionEvent event) throws IOException {
         load_fxml("Start_screen.fxml");
 
@@ -26,7 +27,7 @@ public class GameOver extends Menu{
     }
     public void displayScore(){
         currentScore.setText(String.valueOf(curr_score));
-        bestScore.setText(String.valueOf(best_score));
+        BestScore.setText(String.valueOf(best_score));
     }
 
 }

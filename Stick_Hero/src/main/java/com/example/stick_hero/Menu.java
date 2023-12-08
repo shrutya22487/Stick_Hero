@@ -4,20 +4,18 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.Objects;
 import java.util.Random;
 
 public abstract class Menu {
-    private int best_score, curr_score, cherries;
+    int best_score, curr_score = 0, cherries;
     private Profile p;
     @FXML
     ImageView bg;
@@ -25,14 +23,25 @@ public abstract class Menu {
     ImageView mute_image;
     @FXML
     Button mute;
+    @FXML
+    Label cherry_count;
     boolean bool_mute;
     MediaPlayer mediaPlayer;
+    public Profile get_profile() {
+        return p;
+    }
+    public void increase_currscore(){
+        p.setCurr_score(++curr_score);
+    }
     //Thread music_thread;
-    public void get_profile(Profile p){
+    public void set_profile(Profile p){
         this.p = p;
         this.best_score = p.getCurr_score();
         this.cherries = p.getCherries();
         this.curr_score = p.getCurr_score();
+    }
+    public int get_cherries(){
+        return p.getCherries();
     }
 
     public void get_m_thread_reference(MediaPlayer mediaPlayer, boolean bool_mute){
@@ -81,9 +90,10 @@ public abstract class Menu {
 
             Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
             Menu ss = fxml_loader.getController();
-            ss.get_profile(p);
+            ss.set_profile(p);
             ss.get_m_thread_reference(mediaPlayer, bool_mute);
             ss.random_background();
+            ss.cherry_count.setText(String.valueOf(get_cherries()));
 
             stage.setResizable(false);
             stage.getIcons().add(icon);
