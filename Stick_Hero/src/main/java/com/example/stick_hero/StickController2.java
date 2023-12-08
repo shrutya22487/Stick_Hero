@@ -235,3 +235,4 @@ public class StickController2 implements Initializable {
         freq2++;
     }
 }
+
