@@ -38,8 +38,8 @@ public class StickController2 implements Initializable {
     private int width;
     private int y=646;
 //    private int blockAfterTravel=1000;
-    private Image image1 = new Image("C:\\Users\\ASUS\\Desktop\\AP_Project\\Stick_Hero\\src\\main\\resources\\com\\example\\stick_hero\\run1.png");
-    private Image image2 = new Image("C:\\Users\\ASUS\\Desktop\\AP_Project\\Stick_Hero\\src\\main\\resources\\com\\example\\stick_hero\\run2.png");
+    private Image image1 = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\run1.png");
+    private Image image2 = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\run2.png");
     @FXML
     private Rectangle stick;
     private Timeline timeline1, timeline3_1, timeline3_2, timeline4, timeline5, timeline6;

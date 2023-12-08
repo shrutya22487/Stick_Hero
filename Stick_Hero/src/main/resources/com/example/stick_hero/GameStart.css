@@ -2,10 +2,10 @@
 {
     -fx-background-color : #e10b0e;
     -fx-background-radius: 50%;
-    -fx-min-width: 150px;
-    -fx-min-height: 150px;
-    -fx-max-width: 150px;
-    -fx-max-height: 150px;
+    -fx-min-width: 100px;
+    -fx-min-height: 100px;
+    -fx-max-width: 100px;
+    -fx-max-height: 100px;
 }
 
 .button1
@@ -22,7 +22,7 @@
 {
     -fx-background-color : #cf5d5d;
     -fx-background-radius: 50%;
-    -fx-min-width: 150px;
+    -fx-min-width: 190px;
     -fx-min-height: 150px;
     -fx-max-width: 150px;
     -fx-max-height: 150px;
