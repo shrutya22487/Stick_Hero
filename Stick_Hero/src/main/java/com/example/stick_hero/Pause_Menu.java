@@ -1,19 +1,16 @@
 package com.example.stick_hero;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.util.Random;
 
-public class Pause_Menu {
+public class Pause_Menu extends Menu {
+
     @FXML
-    ImageView bg;
-    public void set_background(String filepath){
-        bg.setImage(new Image(filepath));
-    }
-    @FXML
-    public void continue_game(int currscore, int cherries) {
+    public void continue_game(ActionEvent event) {
 
     }
 

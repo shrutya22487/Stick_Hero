@@ -2,43 +2,29 @@ package com.example.stick_hero;
 
 import java.io.*;
 public class Profile implements Serializable {
-    private String username;
-    private int berries;
-    private Avatar av1;
-    private int highScore;
-    public Profile(String username, String password, int berries, Avatar av1, int highScore) {
-        this.username = username;
-        this.berries = berries;
-        this.av1 = av1;
+    private int cherries = 0;
+    private int highScore = 0, curr_score = 0;
+
+    public void set_info(int cherries, int highScore, int curr_score) {
+        this.cherries = cherries;
         this.highScore = highScore;
-    }
-    public int getBerries() {
-        return berries;
+        this.curr_score = curr_score;
     }
 
-    public String getUsername() {
-        return username;
+    public int getCurr_score() {
+        return curr_score;
     }
 
-    public Avatar getAv1() {
-        return av1;
+    public void increase_cherries(){
+        cherries++;
     }
+
+    public int getCherries() {
+        return cherries;
+    }
+
     public int getHighScore() {
         return highScore;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setBerries(int berries) {
-        this.berries = berries;
-    }
-    public void setAv1(Avatar av1) {
-        this.av1 = av1;
-    }
-    public void setHighScore(int highScore) {
-        this.highScore = highScore;
     }
 
     public void serializeProfile(Profile p)

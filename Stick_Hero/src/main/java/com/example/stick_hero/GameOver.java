@@ -5,28 +5,28 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 
-public class GameOver{
+import java.io.IOException;
+
+public class GameOver extends Menu{
     private int best_score, curr_score;
     private Image home, restart;
     @FXML
     private Label currentScore;
     @FXML
     private Label bestScore;
+    @FXML
 
-    public void go_to_home(ActionEvent event){
-        //new Start_screen();
-        //to go back to home
+    public void go_to_home(ActionEvent event) throws IOException {
+        load_fxml("Start_screen.fxml");
+
     }
-    public void restart_game(ActionEvent event){
-        //new Game_screen();
-        //to restart the game
+    @FXML
+    public void restart_game(ActionEvent event) throws IOException {
+        load_fxml("Game_screen2.fxml");
     }
     public void displayScore(){
         currentScore.setText(String.valueOf(curr_score));
         bestScore.setText(String.valueOf(best_score));
-    }
-
-    public static void showGameOverScreen(){
     }
 
 }

@@ -24,44 +24,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class BeginScreen {
-    @FXML
-    ImageView bg;
-    public void random_background(){
-        Random random = new Random();
-        int r = random.nextInt(0,3);
-        switch (r) {
-            case 1:
-                bg.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\bg1.png"));
-                break;
-            case 2:
-                bg.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\bg2.png"));
-                break;
-            case 3:
-                bg.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\bg3.png"));
-                break;
-        }
-    }
+public class BeginScreen extends Menu {
+
 
     @FXML
     public void new_game(ActionEvent event) throws IOException{
-        try {
-            Stage stage = Main.stage;
-            FXMLLoader fxml_loader =  new FXMLLoader(getClass().getResource("Start_screen.fxml"));
-            Scene scene = new Scene( fxml_loader.load() );
-            Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
-            Start_screen ss = fxml_loader.getController();
-            ss.random_background();
-            stage.setResizable(false);
-            stage.getIcons().add(icon);
-            stage.setTitle("Stick Hero");
-//            stage.setFullScreen(true);
-            stage.setScene(scene);
-            stage.show();
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
+        Profile new_profile = new Profile();
+        this.get_profile(new_profile);
+        Start_screen ss = (Start_screen) load_fxml("Start_screen.fxml");
     }
 
     @FXML

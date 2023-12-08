@@ -12,9 +12,10 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.GameOver">
+<?import javafx.scene.shape.Circle?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.GameOver">
    <children>
-      <ImageView fitHeight="800.0" fitWidth="500.0" focusTraversable="true" layoutX="1.0" layoutY="-2.0" nodeOrientation="INHERIT" pickOnBounds="true">
+      <ImageView fx:id="bg" fitHeight="500.0" fitWidth="800.0" focusTraversable="true" nodeOrientation="INHERIT" pickOnBounds="true">
          <image>
             <Image url="@bg2.png" />
          </image>
@@ -25,7 +26,7 @@
             <Blend />
          </effect>
       </ImageView>
-      <Label alignment="CENTER" layoutX="57.0" layoutY="46.0" prefHeight="70.0" prefWidth="388.0" text="Game Over !!" textAlignment="JUSTIFY" textOverrun="WORD_ELLIPSIS" wrapText="true">
+      <Label alignment="CENTER" layoutX="206.0" layoutY="32.0" prefHeight="70.0" prefWidth="388.0" text="Game Over !!" textAlignment="JUSTIFY" textOverrun="WORD_ELLIPSIS" wrapText="true">
          <font>
             <Font name="Microsoft YaHei Bold" size="52.0" />
          </font>
@@ -33,11 +34,11 @@
             <SepiaTone level="0.0" />
          </effect>
       </Label>
-      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="176.0" layoutX="103.0" layoutY="153.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="295.0">
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="176.0" layoutX="253.0" layoutY="120.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="295.0">
          <effect>
             <Glow />
          </effect></Rectangle>
-      <Label alignment="CENTER" blendMode="SRC_ATOP" depthTest="ENABLE" layoutX="107.0" layoutY="160.0" prefHeight="162.0" prefWidth="285.0" text="Score&#10;   &#10; Best&#10;   " textAlignment="JUSTIFY" wrapText="true">
+      <Label alignment="CENTER" blendMode="SRC_ATOP" depthTest="ENABLE" layoutX="257.0" layoutY="127.0" prefHeight="162.0" prefWidth="285.0" text="Score&#10;   &#10; Best&#10;   " textAlignment="JUSTIFY" wrapText="true">
          <font>
             <Font name="Comic Sans MS" size="26.0" />
          </font>
@@ -47,7 +48,7 @@
       </Label>
       <AnchorPane layoutX="333.0" layoutY="472.0" />
       <AnchorPane layoutX="53.0" layoutY="453.0" prefHeight="0.0" prefWidth="0.0" />
-      <Button alignment="CENTER" defaultButton="true" layoutX="300.0" layoutY="453.0" maxHeight="86.0" maxWidth="93.0" mnemonicParsing="false" onAction="#restart_game" prefHeight="86.0" prefWidth="93.0" styleClass="button1" stylesheets="@Game_over.css">
+      <Button alignment="CENTER" defaultButton="true" layoutX="448.0" layoutY="331.0" maxHeight="86.0" maxWidth="93.0" mnemonicParsing="false" onAction="#restart_game" prefHeight="86.0" prefWidth="93.0" styleClass="button1" stylesheets="@Game_over.css">
          <graphic>
             <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -56,7 +57,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="103.0" layoutY="453.0" minHeight="78.0" minWidth="84.0" mnemonicParsing="false" onAction="#go_to_home" prefHeight="78.0" prefWidth="84.0" stylesheets="@Game_over.css">
+      <Button layoutX="267.0" layoutY="331.0" minHeight="78.0" minWidth="84.0" mnemonicParsing="false" onAction="#go_to_home" prefHeight="78.0" prefWidth="84.0" stylesheets="@Game_over.css">
          <graphic>
             <ImageView fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -65,21 +66,18 @@
             </ImageView>
          </graphic>
       </Button>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" height="200.0" layoutX="150.0" layoutY="600.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
-      <ImageView fitHeight="84.0" fitWidth="34.0" layoutX="233.0" layoutY="553.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@tick.png" />
-         </image>
-      </ImageView>
-      <Label fx:id="currentScore" layoutX="234.0" layoutY="202.0" prefHeight="31.0" prefWidth="34.0" text="23">
+
+      <Label fx:id="currentScore" layoutX="383.0" layoutY="169.0" prefHeight="31.0" prefWidth="34.0" text="23">
          <font>
             <Font size="26.0" />
          </font>
       </Label>
-      <Label fx:id="BestScore" layoutX="228.0" layoutY="280.0" prefHeight="31.0" prefWidth="42.0" text="100">
+      <Label fx:id="BestScore" layoutX="378.0" layoutY="250.0" prefHeight="31.0" prefWidth="42.0" text="100">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
+      <Circle fill="#c41111" layoutX="755.0" layoutY="49.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="mute_image" fitHeight="60.0" fitWidth="60.0" layoutX="725.0" layoutY="20.0" onMouseClicked="#Mute" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
