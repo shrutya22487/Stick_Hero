@@ -95,5 +95,10 @@
             <Font name="Microsoft Sans Serif" size="23.0" />
          </font>
       </Button>
+      <Button layoutX="594.0" layoutY="356.0" maxHeight="166.0" maxWidth="226.0" minHeight="49.0" minWidth="88.0" mnemonicParsing="false" onAction="#revive" prefHeight="49.0" prefWidth="168.0" style="-fx-background-color: #e10b0e; -fx-background-radius: 20;" text="REVIVE" textFill="#faf6f6">
+         <font>
+            <Font name="Microsoft Sans Serif" size="23.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

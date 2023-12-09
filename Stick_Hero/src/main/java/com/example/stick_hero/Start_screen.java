@@ -32,18 +32,27 @@ public class Start_screen extends Menu{
         profile_select ps = (profile_select) load_fxml("profile_select.fxml");
         ps.check_files();
     }
+    @FXML
+    public void buy_cherries(ActionEvent event) throws IOException {
+        load_fxml("Buy_Berries.fxml");
+    }
+    @FXML
+    public void save_game(ActionEvent event) {
+        System.out.println(this.save_slot);
+        switch (this.save_slot) {
+            case 1:
+                System.out.println(get_profile().getCurr_score());
+                Profile.serializeProfile(get_profile(), "game_1.txt");
+                break;
+            case 2:
+                System.out.println(get_profile().getCurr_score());
+                Profile.serializeProfile(get_profile(), "game_2.txt");
+                break;
+            case 3:
+                Profile.serializeProfile(get_profile(), "game_3.txt");
+                break;
+        }
+    }
 
-    public void show_tutorial(ActionEvent event){
-        // the labels for tutorials that are going to pop up
-    }
-    public void buy_cherries(ActionEvent event){
-        //is going to show dummy menu for buying cherries
-    }
-    public void buy_avatar(ActionEvent event){
-        // to buy avatar with cherries
-    }
-    public void mute(ActionEvent event){
-        // is going to mute sound
-    }
 
 }

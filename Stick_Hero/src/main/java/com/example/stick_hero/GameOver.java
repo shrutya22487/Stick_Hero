@@ -4,10 +4,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
 public class GameOver extends Menu{
+    private int temp_currscore;
     private Image home, restart;
     @FXML
     private Label currentScore;
@@ -40,8 +42,19 @@ public class GameOver extends Menu{
         load_fxml("Game_screen2.fxml");
     }
     public void displayScore(int curr_score, int best_score){
+        temp_currscore = curr_score;
         currentScore.setText(String.valueOf(curr_score));
         BestScore.setText(String.valueOf(best_score));
+    }
+    @FXML
+    public void revive(ActionEvent event) throws IOException {
+        if (get_cherries() >= 2) {
+            get_profile().setCurr_score(temp_currscore);
+            get_profile().setCherries(get_cherries() - 2);
+            StickController2 stickController2 = (StickController2) load_fxml("Game_screen2.fxml");
+            stickController2.curr_score.setText(String.valueOf(temp_currscore));
+            stickController2.cherry_count.setText(String.valueOf(get_cherries()));
+        }
     }
 
 }

@@ -11,18 +11,13 @@
 
 <AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.StickController2">
    <children>
-      <ImageView fx:id="bg" fitHeight="500.0" fitWidth="806.0" pickOnBounds="true">
-         <image>
-            <Image url="@bg2.png" />
-         </image>
-      </ImageView>
+      <ImageView fx:id="bg" fitHeight="500.0" fitWidth="806.0" pickOnBounds="true" />
       <Button layoutX="16.0" layoutY="15.0" mnemonicParsing="false" onAction="#pause" prefHeight="51.0" prefWidth="44.0" style="-fx-background-color: #d40202; -fx-background-radius: 100;" text="| |">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="7.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="26.0" x="371.0" y="646.0" />
-      <Button layoutX="3.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#screenClick" onMousePressed="#stickGrow" onMouseReleased="#stickStop" opacity="0.0" prefHeight="500.0" prefWidth="800.0" text="Button" textFill="#4b4040" underline="true" wrapText="true" />
       <Rectangle fx:id="blockPrevious" arcHeight="5.0" arcWidth="5.0" fill="#d6dce1" height="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" y="300.0" />
       <ImageView fx:id="imageView" fitHeight="62.0" fitWidth="26.0" layoutX="25.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -38,6 +33,7 @@
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="42.0" layoutX="709.0" layoutY="96.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="113.0" layoutX="365.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+      <Button layoutX="3.0" layoutY="95.0" mnemonicParsing="false" onMouseClicked="#screenClick" onMousePressed="#stickGrow" onMouseReleased="#stickStop" opacity="0.0" prefHeight="410.0" prefWidth="800.0" text="Button" textFill="#4b4040" underline="true" wrapText="true" />
       <Label fx:id="cherry_count" layoutX="719.0" layoutY="103.0" text="0">
          <font>
             <Font name="System Bold" size="18.0" />

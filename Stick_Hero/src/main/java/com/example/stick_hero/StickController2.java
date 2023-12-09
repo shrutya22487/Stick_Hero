@@ -28,7 +28,7 @@ public class StickController2 extends Menu implements Initializable {
     Thread death_t;
     String death = Main.cwd_music + "death.mp3" ;
     String stick_grow = Main.cwd_music + "stick_grow.mp3";
-    MediaPlayer death_media_player = new MediaPlayer(new Media(new File(death).toURI().toString())), stick_grow_media_player = new MediaPlayer(new Media(new File(stick_grow).toURI().toString()));
+    MediaPlayer death_media_player , stick_grow_media_player ;
     Random r = new Random();
     int FLAGiNVERT=0;
     @FXML
@@ -69,10 +69,12 @@ public class StickController2 extends Menu implements Initializable {
 
     //    private int invertFLAG=0;
     public void play_death_sound() {
+        death_media_player = new MediaPlayer(new Media(new File(death).toURI().toString()));
         death_media_player.setAutoPlay(true);
         death_media_player.play();
     }
     public void play_stick_grow_sound() {
+        stick_grow_media_player = new MediaPlayer(new Media(new File(stick_grow).toURI().toString()));
         stick_grow_media_player.setAutoPlay(true);
         stick_grow_media_player.play();
     }

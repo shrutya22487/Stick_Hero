@@ -17,9 +17,6 @@
             <Font name="Microsoft YaHei UI Bold" size="96.0" />
          </font>
       </Label>
-      <Button layoutX="546.0" layoutY="296.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="No Ads" />
-      <Button layoutX="546.0" layoutY="365.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="Heroes" />
-      <Button layoutX="546.0" layoutY="435.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="Berries" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a1a1b" height="169.0" layoutX="288.0" layoutY="331.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
       <Button layoutX="338.0" layoutY="150.0" maxHeight="166.0" maxWidth="168.0" minHeight="108.0" minWidth="88.0" mnemonicParsing="false" onAction="#run_game" prefHeight="108.0" prefWidth="88.0" stylesheets="@GameStart.css" text="PLAY" textFill="#faf6f6">
          <font>
@@ -35,7 +32,7 @@
       <ImageView fx:id="mute_image" fitHeight="60.0" fitWidth="60.0" layoutX="725.0" layoutY="20.0" onMouseClicked="#Mute" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="740.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@cherry.png" />
+            <Image url="@../../../cherry.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="42.0" layoutX="710.0" layoutY="115.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
@@ -47,6 +44,16 @@
       <Button layoutX="14.0" layoutY="425.0" maxHeight="166.0" maxWidth="226.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#go_back" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #e10b0e; -fx-background-radius: 20;" text="&lt;" textFill="#faf6f6">
          <font>
             <Font name="Microsoft Sans Serif" size="31.0" />
+         </font>
+      </Button>
+      <Button layoutX="652.0" layoutY="425.0" maxHeight="166.0" maxWidth="226.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#buy_cherries" prefHeight="60.0" prefWidth="138.0" style="-fx-background-color: #e10b0e; -fx-background-radius: 20;" text="Buy Cherries" textFill="#faf6f6">
+         <font>
+            <Font name="Microsoft Sans Serif" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="655.0" layoutY="356.0" maxHeight="166.0" maxWidth="226.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#save_game" prefHeight="60.0" prefWidth="138.0" style="-fx-background-color: #e10b0e; -fx-background-radius: 20;" text="Save Game" textFill="#faf6f6">
+         <font>
+            <Font name="Microsoft Sans Serif" size="18.0" />
          </font>
       </Button>
    </children>
