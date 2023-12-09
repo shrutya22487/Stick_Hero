@@ -26,16 +26,16 @@ import java.util.ResourceBundle;
 
 public class StickController2 extends Menu implements Initializable {
     Thread death_t;
-    String death = Main.cwd + "death.mp3", stick_grow = Main.cwd + "stick_grow.mp3";
-    MediaPlayer death_media_player = new MediaPlayer(new Media(new File(death).toURI().toString())), stick_grow_media_player = new MediaPlayer(new Media(new File(stick_grow).toURI().toString()));
+    String death = Main.cwd_music + "death.mp3", stick_grow = Main.cwd_music + "stick_grow.mp3";
+    MediaPlayer death_media_player , stick_grow_media_player;
     Random r = new Random();
     @FXML
     private AnchorPane pane;
     private int length, width;
     private int y=646;
 //    private int blockAfterTravel=1000;
-    private Image image1 = new Image(Main.cwd + "run1.png");
-    private Image image2 = new Image(Main.cwd + "run2.png");
+    private Image image1 = new Image(Main.cwd_image + "run1.png");
+    private Image image2 = new Image(Main.cwd_image + "run2.png");
     @FXML
     private Rectangle stick;
     private Timeline timeline1, timeline3_1, timeline3_2, timeline4, timeline5, timeline6;
@@ -66,10 +66,12 @@ public class StickController2 extends Menu implements Initializable {
 
     //    private int invertFLAG=0;
     public void play_death_sound() {
+        death_media_player = new MediaPlayer(new Media(new File(death).toURI().toString()));
         death_media_player.setAutoPlay(true);
         death_media_player.play();
     }
     public void play_stick_grow_sound() {
+        stick_grow_media_player = new MediaPlayer(new Media(new File(stick_grow).toURI().toString()));
         stick_grow_media_player.setAutoPlay(true);
         stick_grow_media_player.play();
     }

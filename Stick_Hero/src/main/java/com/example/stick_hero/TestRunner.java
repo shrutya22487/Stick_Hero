@@ -2,13 +2,10 @@ package com.example.stick_hero;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -20,7 +17,7 @@ public class TestRunner extends Application{
     public static Stage stage;
     MediaPlayer mediaPlayer;
     public void music_player(){
-        Media media = new Media(new File(Main.cwd + "music.mp3").toURI().toString());
+        Media media = new Media(new File(Main.cwd_image + "music.mp3").toURI().toString());
         mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
         mediaPlayer.setVolume(0.1);
@@ -34,7 +31,7 @@ public class TestRunner extends Application{
             stage = _stage;
             FXMLLoader fxml_loader =  new FXMLLoader(getClass().getResource("Game_screen2.fxml"));
             Scene scene = new Scene( fxml_loader.load() );
-            Image icon = new Image(Main.cwd + "hero.png");
+            Image icon = new Image(Main.cwd_image + "hero.png");
             StickController2 bs = fxml_loader.getController();
             bs.set_profile(new Profile());
             bs.random_background();

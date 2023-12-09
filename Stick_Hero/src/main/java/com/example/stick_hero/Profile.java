@@ -2,7 +2,15 @@ package com.example.stick_hero;
 
 import java.io.*;
 public class Profile implements Serializable {
+    private static final long serialVersionUID = 42L;
     private int cherries = 0;
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj != null && getClass() == obj.getClass()) if (this.curr_score == ((Profile) obj).getCurr_score() && this.highScore == ((Profile) obj).getHighScore() && this.cherries == ((Profile) obj).getCherries()) return true;
+        return false;
+    }
+
     private int highScore = 0, curr_score = 0;
 
     public int getCurr_score() {
