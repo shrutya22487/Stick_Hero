@@ -25,10 +25,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class StickController2 extends Menu implements Initializable {
-    Thread death_t, walk_t, grow_t;
-    String death = "src\\main\\resources\\com\\example\\stick_hero\\death.mp3";
-    String stick_grow = "src\\main\\resources\\com\\example\\stick_hero\\stick_grow.mp3";
-    String walk = "src\\main\\resources\\com\\example\\stick_hero\\walk.mp3";
     Random r = new Random();
     @FXML
     private AnchorPane pane;

@@ -16,8 +16,6 @@ public class BeginScreen extends Menu {
         profile_select ps = (profile_select)load_fxml("profile_select.fxml");
         ps.check_files();
     }
-
-
     @FXML
     public void choose_profile(ActionEvent event) throws IOException {
         this.set_profile(new Profile());
