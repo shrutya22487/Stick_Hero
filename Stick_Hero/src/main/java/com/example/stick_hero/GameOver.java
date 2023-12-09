@@ -44,10 +44,12 @@ public class GameOver extends Menu{
     }
     @FXML
     public void go_to_home(ActionEvent event) throws IOException {
+        get_profile().setCurr_score(0);
         load_fxml("Start_screen.fxml");
     }
     @FXML
     public void restart_game(ActionEvent event) throws IOException {
+        get_profile().setCurr_score(0);
         load_fxml("Game_screen2.fxml");
     }
     public void displayScore(int curr_score, int best_score){

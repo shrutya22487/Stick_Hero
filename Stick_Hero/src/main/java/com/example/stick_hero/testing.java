@@ -1,9 +1,12 @@
 package com.example.stick_hero;
 
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.Stage;
 import org.junit.Test;
-
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import java.io.File;
+import java.io.IOException;
 import java.io.NotActiveException;
 
 import static org.junit.Assert.*;
