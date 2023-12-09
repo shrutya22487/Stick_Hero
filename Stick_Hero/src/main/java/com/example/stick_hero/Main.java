@@ -11,10 +11,11 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 public class Main extends Application{
-    public static String cwd_image =  "file:Stick_Hero\\src\\main\\resources\\com\\example\\stick_hero\\" ;
-    public static String cwd_music =  "Stick_Hero\\src\\main\\resources\\com\\example\\stick_hero\\" ;
+    public static String cwd_image =  "file:src\\main\\resources\\com\\example\\stick_hero\\" ;
+    public static String cwd_music =  String.valueOf(Paths.get("").toAbsolutePath()) + "\\src\\main\\resources\\com\\example\\stick_hero\\" ;
 
     public static Stage stage;
     MediaPlayer mediaPlayer;

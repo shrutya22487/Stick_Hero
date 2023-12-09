@@ -19,11 +19,11 @@ public class GameOver extends Menu{
     public void save_game() {
         switch (this.save_slot) {
             case 1:
-                System.out.println(get_profile().getCurr_score());
+                System.out.println(get_profile().getHighScore());
                 Profile.serializeProfile(get_profile(), "game_1.txt");
                 break;
             case 2:
-                System.out.println(get_profile().getCurr_score());
+                System.out.println(get_profile().getHighScore());
                 Profile.serializeProfile(get_profile(), "game_2.txt");
                 break;
             case 3:
