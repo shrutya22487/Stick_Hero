@@ -14,13 +14,12 @@ import java.io.IOException;
 import java.nio.file.Paths;
 
 public class Main extends Application{
-    public static String cwd_image =  "file:src\\main\\resources\\com\\example\\stick_hero\\" ;
-    public static String cwd_music =  String.valueOf(Paths.get("").toAbsolutePath()) + "\\src\\main\\resources\\com\\example\\stick_hero\\" ;
+    public static String cwd_music =  String.valueOf(Paths.get("").toAbsolutePath()) + "\\src\\main\\resources\\" ;
 
     public static Stage stage;
     MediaPlayer mediaPlayer;
     public void music_player(){
-        Media media = new Media(new File(Main.cwd_music + "music.mp3").toURI().toString());
+        Media media = new Media(new File(cwd_music + "music.mp3").toURI().toString());
         mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
         mediaPlayer.setVolume(0.1);
@@ -39,7 +38,7 @@ public class Main extends Application{
             Parent root = fxml_loader.load();
             BeginScreen bs = fxml_loader.getController();
             Scene scene = new Scene(root);
-            Image icon = new Image(Main.cwd_image + "hero.png");
+            Image icon = new Image("hero.png");
             bs.random_background();
             bs.get_m_thread_reference(mediaPlayer, false);
             stage.setResizable(false);

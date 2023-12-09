@@ -26,19 +26,20 @@ import java.util.ResourceBundle;
 
 public class StickController2 extends Menu implements Initializable {
     Thread death_t;
-    String death = Main.cwd_music + "death.mp3", stick_grow = Main.cwd_music + "stick_grow.mp3";
-    MediaPlayer death_media_player , stick_grow_media_player;
+    String death = Main.cwd_music + "death.mp3" ;
+    String stick_grow = Main.cwd_music + "stick_grow.mp3";
+    MediaPlayer death_media_player = new MediaPlayer(new Media(new File(death).toURI().toString())), stick_grow_media_player = new MediaPlayer(new Media(new File(stick_grow).toURI().toString()));
     Random r = new Random();
+    int FLAGiNVERT=0;
     @FXML
     private AnchorPane pane;
     private int length, width;
-    private int y=646;
-//    private int blockAfterTravel=1000;
-    private Image image1 = new Image(Main.cwd_image + "run1.png");
-    private Image image2 = new Image(Main.cwd_image + "run2.png");
+    private int y=300;
+    private Image image1 = new Image("run1.png");
+    private Image image2 = new Image("run2.png");
     @FXML
     private Rectangle stick;
-    private Timeline timeline1, timeline3_1, timeline3_2, timeline4, timeline5, timeline6;
+    private Timeline timeline1, timeline3_1, timeline3_2, timeline3_1I, timeline3_2I, timeline4, timeline5, timeline6;
     private RotateTransition rotateTransition, rotateTransition2;
     @FXML
     private ImageView imageView;
@@ -48,8 +49,10 @@ public class StickController2 extends Menu implements Initializable {
     private Rectangle blockAfter;
     @FXML
     Label curr_score;
+    Image inverted_img = new Image( "HeroInverted.png");
     private Rectangle blockNew;
     private Rectangle stickNew;
+    private ImageView cherry;
     private int freq1 = 0, freq2 = 0;
 
     @Override
@@ -66,12 +69,10 @@ public class StickController2 extends Menu implements Initializable {
 
     //    private int invertFLAG=0;
     public void play_death_sound() {
-        death_media_player = new MediaPlayer(new Media(new File(death).toURI().toString()));
         death_media_player.setAutoPlay(true);
         death_media_player.play();
     }
     public void play_stick_grow_sound() {
-        stick_grow_media_player = new MediaPlayer(new Media(new File(stick_grow).toURI().toString()));
         stick_grow_media_player.setAutoPlay(true);
         stick_grow_media_player.play();
     }
@@ -83,11 +84,12 @@ public class StickController2 extends Menu implements Initializable {
         blockPrevious.setFill(Color.DARKGRAY);
         PlatForm platform = new PlatForm(blockPrevious);
         blockAfter = platform.getPlatformCurrent();
-//        cherry = (new Cherry(blockPrevious, blockAfter)).getImageView();
+        cherry = (new Cherry(blockPrevious, blockAfter)).getImageView();
         blockAfter.setX(1000);
         stick = (new Stick(blockPrevious)).getStick();
         pane.getChildren().add(blockAfter);
         pane.getChildren().add(stick);
+        pane.getChildren().add(cherry);
 //        cherryCountText.setText(String.valueOf(cherryCount));
 
         timeline1 = new Timeline(new KeyFrame(Duration.millis(5), e->{
@@ -101,44 +103,81 @@ public class StickController2 extends Menu implements Initializable {
         timeline3_1 = new Timeline(new KeyFrame(Duration.millis(5), e->{
             if (imageView.getX()%4==0)
             {
-                imageView.setImage(image2);
-            } else {
                 imageView.setImage(image1);
+
+            } else {
+                imageView.setImage(image2);
             }
             imageView.setX(imageView.getX()+1);
+            System.out.println(FLAGiNVERT);
 
-//            if (invertFLAG==1 && imageView.getX()==cherry.getX()){
-//                cherryCount++;
-//                cherryCountText.setText(String.valueOf(cherryCount));
-//            }
+            if (FLAGiNVERT==1 && imageView.getX()+13==cherry.getX()){
+                int a = get_cherries();
+                this.get_profile().setCherries(++a);
+                this.cherry_count.setText(String.valueOf(a));
+                cherry.setOpacity(0);
+            }
+
+            if (FLAGiNVERT==1 && imageView.getX()+13==blockAfter.getX()){
+                timeline3_2.stop();
+                timeline4.play();
+                timeline4.setOnFinished(t-> {
+                    GameOver gameOver = null;
+                    try {
+                        gameOver = (GameOver) load_fxml("Game_over.fxml");
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    gameOver.displayScore(get_profile().getCurr_score(), get_profile().getHighScore());
+
+                });
+            }
         }));
 
         timeline3_2 = new Timeline(new KeyFrame(Duration.millis(5), e->{
             if (imageView.getX()%4==0)
             {
-                imageView.setImage(image2);
-            } else {
                 imageView.setImage(image1);
+            } else {
+                imageView.setImage(image2);
             }
             imageView.setX(imageView.getX()+1);
+            System.out.println(FLAGiNVERT);
 
-//            if (invertFLAG==1 && imageView.getX()==cherry.getX()){
-//                cherryCount++;
-//                cherryCountText.setText(String.valueOf(cherryCount));
-//            }
+            if (FLAGiNVERT==1 && imageView.getX()+26==cherry.getX()){
+                int a = get_cherries();
+                this.get_profile().setCherries(++a);
+                this.cherry_count.setText(String.valueOf(a));
+                cherry.setOpacity(0);
+            }
+
+            if (FLAGiNVERT==1 && imageView.getX()+26==blockAfter.getX()){
+                timeline3_2.stop();
+                timeline4.play();
+                timeline4.setOnFinished(t-> {
+                    GameOver gameOver = null;
+                    try {
+                        gameOver = (GameOver) load_fxml("Game_over.fxml");
+                    } catch (IOException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    gameOver.displayScore(get_profile().getCurr_score(), get_profile().getHighScore());
+                });
+            }
         }));
 
-        timeline4 = new Timeline(new KeyFrame(Duration.millis(10), e->{
+        timeline4 = new Timeline(new KeyFrame(Duration.millis(5), e->{
             imageView.setY(imageView.getY()+1);
         }));
 
         timeline4.setCycleCount(204);
 
-        timeline5 = new Timeline(new KeyFrame(Duration.millis(10), e->{
-            blockAfter.setX(blockAfter.getX()-10);
+        timeline5 = new Timeline(new KeyFrame(Duration.millis(1), e->{
+            blockAfter.setX(blockAfter.getX()-1);
         }));
 
-        timeline5.setCycleCount((1000-platform.getDistanceFromPrev())/10);
+        timeline5.setCycleCount((1000-platform.getDistanceFromPrev()-platform.getWidth()));
+        System.out.println("----------------PLAY-----------------");
         timeline5.play();
 
         timeline6 = new Timeline(new KeyFrame(Duration.millis(1), e->{
@@ -148,13 +187,7 @@ public class StickController2 extends Menu implements Initializable {
             imageView.setX(imageView.getX()-1);
             blockNew.setX(blockNew.getX()-1);
             stickNew.setX(stickNew.getX()-1);
-//            cherry.setX(cherry.getX()-1);
         }));
-
-//        rotateTransition2 = new RotateTransition(Duration.seconds(0), cherry);
-//        moveCenterPlayer(0, -31);
-//        rotateTransition2.setCycleCount(1);
-//        rotateTransition2.setByAngle(180);
     }
 
     public void runWin(){
@@ -187,7 +220,6 @@ public class StickController2 extends Menu implements Initializable {
             }
             timeline4.play();
             timeline4.setOnFinished(t-> {
-
                 GameOver gameOver = null;
                 try {
                     gameOver = (GameOver) load_fxml("Game_over.fxml");
@@ -207,11 +239,10 @@ public class StickController2 extends Menu implements Initializable {
             Thread new_t = new Thread(this::play_stick_grow_sound);
             new_t.start();
             new_t.join();
-            }
+        }
 //            System.out.println("GETX OF BLOCKAFTER BEFORE STICK GROW: " + blockAfter.getX());
             timeline1.play();
             freq1++;
-
         }
     }
 
@@ -221,14 +252,13 @@ public class StickController2 extends Menu implements Initializable {
         this.stick.setTranslateY(y);
     }
 
-//    public void moveCenterPlayer(double x, double y){
-//        this.imageView.getTransforms().add(new Translate(-x, -y));
-//        this.imageView.setTranslateX(x);
-//        this.imageView.setTranslateY(y);
-//    }
+    public void moveCenterPlayer(double x, double y){
+        this.imageView.getTransforms().add(new Translate(-x, -y));
+        this.imageView.setTranslateX(x);
+        this.imageView.setTranslateY(y);
+    }
 
     public void levelChange(){
-
         blockNew = new PlatForm(blockAfter).getPlatformCurrent();
         stickNew = (new Stick(blockAfter)).getStick();
         pane.getChildren().add(blockNew);
@@ -242,11 +272,12 @@ public class StickController2 extends Menu implements Initializable {
             blockPrevious = blockAfter;
             blockAfter = blockNew;
             stick = stickNew;
-            y=646;
+            y=300;
+            cherry.setOpacity(0);
+            cherry = (new Cherry(blockPrevious, blockAfter)).getImageView();
+            pane.getChildren().add(cherry);
         });
     }
-
-
     public void stickStop(MouseEvent event) throws IOException, InterruptedException {
         if (freq2 == 0) {
             timeline1.stop();
@@ -265,23 +296,33 @@ public class StickController2 extends Menu implements Initializable {
             } else {
                 System.out.println("You loose");
                 rotateTransition.setOnFinished(e -> runLoose());
-                freq2++;
             }
+            freq2++;
         }
     }
     public void screenClick(MouseEvent event){
 //        if (freq1>0 && freq2>0)
 //        {
-//            rotateTransition2.play();
+//            rotateTransition2 = new RotateTransition(Duration.millis(1), cherry);
+//            rotateTransition2.setCycleCount(1);
+//            rotateTransition2.setByAngle(-180);
+////            rotateTransition2.play();
 //        }
         if (freq1%2==0 && freq2%2==0)
         {
-            imageView.setRotate(0);
+            imageView.setY(imageView.getY()+31);
+            imageView.setScaleY(-1);
+            FLAGiNVERT=1;
+//            imageView.setScaleX(1);
         } else if ((freq1%2!=0 && freq2%2!=0) && (freq1>1 && freq2>1)){
-            imageView.setRotate(180);
+            FLAGiNVERT=0;
+            imageView.setY(imageView.getY()-31);
+            imageView.setScaleY(1);
+//            imageView.setScaleX(-1);
         }
         freq1++;
         freq2++;
+        System.out.println(" " + freq1 + " " + freq2);
     }
 
     @FXML

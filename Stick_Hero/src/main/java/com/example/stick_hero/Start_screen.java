@@ -23,8 +23,8 @@ public class Start_screen extends Menu{
     private Image dummy_avatar;
     @FXML
     public void run_game(ActionEvent event) throws IOException {
-        StickController2 stickController2 = (StickController2) load_fxml("Game_screen2.fxml");
-        stickController2.curr_score.setText(String.valueOf(get_profile().getCurr_score()));
+        load_fxml("Game_screen2.fxml");
+//        stickController2.curr_score.setText(String.valueOf(get_profile().getCurr_score())); StickController2 stickController2 = (StickController2)
     }
 
     @Override

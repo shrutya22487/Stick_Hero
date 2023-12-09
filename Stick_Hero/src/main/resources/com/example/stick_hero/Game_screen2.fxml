@@ -9,51 +9,46 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" prefHeight="850.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.StickController2">
+<AnchorPane fx:id="pane" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.StickController2">
    <children>
-      <ImageView fx:id="bg" fitHeight="850.0" fitWidth="502.0" layoutX="-2.0" pickOnBounds="true">
+      <ImageView fx:id="bg" fitHeight="500.0" fitWidth="806.0" pickOnBounds="true">
          <image>
             <Image url="@bg2.png" />
          </image>
       </ImageView>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#pause" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: #d40202; -fx-background-radius: 100;" text="| |">
+      <Button layoutX="16.0" layoutY="15.0" mnemonicParsing="false" onAction="#pause" prefHeight="51.0" prefWidth="44.0" style="-fx-background-color: #d40202; -fx-background-radius: 100;" text="| |">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <ImageView fitHeight="44.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" x="210.0" y="655.0">
-         <image>
-            <Image url="@cherry.png" />
-         </image>
-      </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="7.0" opacity="0.0" stroke="BLACK" strokeType="INSIDE" width="26.0" x="371.0" y="646.0" />
-      <Button layoutY="68.0" mnemonicParsing="false" onMouseClicked="#screenClick" onMousePressed="#stickGrow" onMouseReleased="#stickStop" opacity="0.0" prefHeight="783.0" prefWidth="500.0" text="Button" textFill="#4b4040" underline="true" wrapText="true" />
-      <Rectangle fx:id="blockPrevious" arcHeight="5.0" arcWidth="5.0" fill="#d6dce1" height="204.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" y="646.0" />
-      <ImageView fx:id="imageView" fitHeight="62.0" fitWidth="26.0" layoutX="25.0" layoutY="609.0" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="3.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#screenClick" onMousePressed="#stickGrow" onMouseReleased="#stickStop" opacity="0.0" prefHeight="500.0" prefWidth="800.0" text="Button" textFill="#4b4040" underline="true" wrapText="true" />
+      <Rectangle fx:id="blockPrevious" arcHeight="5.0" arcWidth="5.0" fill="#d6dce1" height="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" y="300.0" />
+      <ImageView fx:id="imageView" fitHeight="62.0" fitWidth="26.0" layoutX="25.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@run2.png" />
+            <Image url="@../../../run2.png" />
          </image>
       </ImageView>
-      <Circle fill="#c41111" layoutX="755.0" layoutY="49.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
-      <ImageView fx:id="mute_image" fitHeight="60.0" fitWidth="60.0" layoutX="725.0" layoutY="20.0" onMouseClicked="#Mute" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="740.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+      <Circle fill="#c41111" layoutX="739.0" layoutY="49.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="mute_image" fitHeight="60.0" fitWidth="60.0" layoutX="709.0" layoutY="16.0" onMouseClicked="#Mute" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="739.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@cherry.png" />
+            <Image url="@../../../cherry.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="42.0" layoutX="710.0" layoutY="115.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="113.0" layoutX="373.0" layoutY="19.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
-      <Label fx:id="cherry_count" layoutX="719.0" layoutY="122.0" text="0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="42.0" layoutX="709.0" layoutY="96.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="113.0" layoutX="365.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+      <Label fx:id="cherry_count" layoutX="719.0" layoutY="103.0" text="0">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="curr_score" layoutX="416.0" layoutY="84.0" text="0">
+      <Label fx:id="curr_score" layoutX="408.0" layoutY="78.0" text="0">
          <font>
             <Font name="System Bold" size="27.0" />
          </font>
       </Label>
-      <Label layoutX="384.0" layoutY="26.0" text="Current &#10;Score" textAlignment="CENTER">
+      <Label layoutX="376.0" layoutY="14.0" text="Current &#10;Score" textAlignment="CENTER">
          <font>
             <Font size="22.0" />
          </font>

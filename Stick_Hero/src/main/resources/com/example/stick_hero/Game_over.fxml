@@ -52,7 +52,7 @@
          <graphic>
             <ImageView fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@restart-removebg-preview.png" />
+                  <Image url="@../../../restart.png" />
                </image>
             </ImageView>
          </graphic>
@@ -61,7 +61,7 @@
          <graphic>
             <ImageView fitHeight="82.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@home-removebg-preview.png" />
+                  <Image url="@../../../home.png" />
                </image>
             </ImageView>
          </graphic>
@@ -81,7 +81,7 @@
       <ImageView fx:id="mute_image" fitHeight="60.0" fitWidth="60.0" layoutX="725.0" layoutY="20.0" onMouseClicked="#Mute" pickOnBounds="true" preserveRatio="true" />
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="740.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@cherry.png" />
+            <Image url="@../../../cherry.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="42.0" layoutX="710.0" layoutY="115.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />

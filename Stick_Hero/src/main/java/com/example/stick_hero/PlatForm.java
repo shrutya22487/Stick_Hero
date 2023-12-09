@@ -28,17 +28,17 @@ public class PlatForm {
     }
 
     public PlatForm(Rectangle previousPlatform) {
-        this.height = 204;
+        this.height = 200;
         this.previousPlatform = previousPlatform;
         this.width = random.nextInt(50, 200);
-        this.distanceFromPrev = random.nextInt(10, 500-(int)previousPlatform.getWidth()-width);
+        this.distanceFromPrev = random.nextInt(20, 550-(int)previousPlatform.getWidth()-width);
         platformCurrent = new Rectangle();
         platformCurrent.setLayoutX(0);
         platformCurrent.setLayoutY(0);
         platformCurrent.setHeight(height);
         platformCurrent.setWidth(width);
-        platformCurrent.setX(previousPlatform.getX()+previousPlatform.getWidth()+10+this.distanceFromPrev);
-        platformCurrent.setY(646);
+        platformCurrent.setX(previousPlatform.getX() + previousPlatform.getWidth() + 20 + this.distanceFromPrev);
+        platformCurrent.setY(300);
         platformCurrent.setFill(Color.DARKGRAY);
     }
 }

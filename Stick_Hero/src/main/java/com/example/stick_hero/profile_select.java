@@ -58,7 +58,7 @@ public class profile_select extends Menu {
         Parent root = fxml_loader.load();
         BeginScreen bs = fxml_loader.getController();
         Scene scene = new Scene(root);
-        Image icon = new Image(Main.cwd_image + "hero.png");
+        Image icon = new Image("hero.png");
         bs.random_background();
         bs.get_m_thread_reference(mediaPlayer, false);
         stage.setResizable(false);

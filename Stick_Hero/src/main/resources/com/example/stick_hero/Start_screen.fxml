@@ -28,7 +28,7 @@
       </Button>
       <ImageView fitHeight="50.0" fitWidth="25.0" layoutX="376.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@hero.png" />
+            <Image url="@../../../hero1.png" />
          </image>
       </ImageView>
       <Circle fill="#c41111" layoutX="755.0" layoutY="49.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />

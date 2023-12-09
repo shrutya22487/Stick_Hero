@@ -17,7 +17,7 @@ public class Stick {
         stick.setLayoutY(0);
         stick.setHeight(0);
         stick.setWidth(3);
-        stick.setY(646);
+        stick.setY(300);
         stick.setX(platformPrevious.getX() + platformPrevious.getWidth());
     }
 }
