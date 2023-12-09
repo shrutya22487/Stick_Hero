@@ -27,8 +27,6 @@ public class Main extends Application{
     @Override
     public void start(Stage _stage) throws IOException {
         try {
-            Thread t = new Thread(this::music_player);
-            t.start();
             stage = _stage;
             FXMLLoader fxml_loader =  new FXMLLoader(getClass().getResource("BeginScreen.fxml"));
             Scene scene = new Scene( fxml_loader.load() );
@@ -46,15 +44,6 @@ public class Main extends Application{
             e.printStackTrace();
         }
     }
-    @Override
-    public void stop() throws Exception {
-        // Release resources when the application is stopped
-        if (mediaPlayer != null) {
-            mediaPlayer.stop();
-        }
-        super.stop();
-    }
-
     public static void main(String[] args) {
         launch();
     }

@@ -2,6 +2,7 @@ package com.example.stick_hero;
 
 import java.io.*;
 public class Profile implements Serializable {
+    private final static long serialVersionUID = 42L;
     private int cherries = 0;
     private int highScore = 0, curr_score = 0;
 

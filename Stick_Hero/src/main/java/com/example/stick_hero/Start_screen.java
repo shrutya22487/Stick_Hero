@@ -18,10 +18,6 @@ import java.security.MessageDigest;
 import java.util.Random;
 
 public class Start_screen extends Menu{
-    private Image volume;
-    private Image cherry;
-    private Image dummy_avatar;
-    private Avatar avatar;
     @FXML
     public void run_game(ActionEvent event) throws IOException {
         StickController2 stickController2 = (StickController2) load_fxml("Game_screen2.fxml");
@@ -33,18 +29,4 @@ public class Start_screen extends Menu{
         profile_select ps = (profile_select) load_fxml("profile_select.fxml");
         ps.check_files();
     }
-
-    public void show_tutorial(ActionEvent event){
-        // the labels for tutorials that are going to pop up
-    }
-    public void buy_cherries(ActionEvent event){
-        //is going to show dummy menu for buying cherries
-    }
-    public void buy_avatar(ActionEvent event){
-        // to buy avatar with cherries
-    }
-    public void mute(ActionEvent event){
-        // is going to mute sound
-    }
-
 }

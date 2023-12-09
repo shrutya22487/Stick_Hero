@@ -26,7 +26,6 @@ import java.util.ResourceBundle;
 
 public class StickController2 extends Menu implements Initializable {
     Thread death_t, walk_t, grow_t;
-    MediaPlayer game_media_player;
     String death = "src\\main\\resources\\com\\example\\stick_hero\\death.mp3";
     String stick_grow = "src\\main\\resources\\com\\example\\stick_hero\\stick_grow.mp3";
     String walk = "src\\main\\resources\\com\\example\\stick_hero\\walk.mp3";
@@ -36,7 +35,7 @@ public class StickController2 extends Menu implements Initializable {
     private int length;
     private int width;
     private int y=646;
-//    private int blockAfterTravel=1000;
+    //    private int blockAfterTravel=1000;
     private Image image1 = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\run1.png");
     private Image image2 = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\run2.png");
     @FXML
@@ -55,14 +54,14 @@ public class StickController2 extends Menu implements Initializable {
     private Rectangle stickNew;
     private int freq1=0;
     private int freq2=0;
-//    private int invertFLAG=0;
-    public void play_sound_effects(String sound_effect) {
-        Media media = new Media(new File(sound_effect).toURI().toString());
-        game_media_player = new MediaPlayer(media);
-        game_media_player.setAutoPlay(true);
-        game_media_player.setVolume(1);
-        game_media_player.play();
-    }
+    //    private int invertFLAG=0;
+//    public void play_sound_effects(String sound_effect) {
+//        Media media = new Media(new File(sound_effect).toURI().toString());
+//        game_media_player = new MediaPlayer(media);
+//        game_media_player.setAutoPlay(true);
+//        game_media_player.setVolume(1);
+//        game_media_player.play();
+//    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
@@ -164,14 +163,14 @@ public class StickController2 extends Menu implements Initializable {
         timeline3_2.setCycleCount(a);
         timeline3_2.play();
         timeline3_2.setOnFinished(e->{
-            if (!bool_mute) {
-                death_t = new Thread(() -> play_sound_effects(death));
-                death_t.start();
-            }
+//            if (!bool_mute) {
+//                death_t = new Thread(() -> play_sound_effects(death));
+//                death_t.start();
+//            }
             timeline4.play();
             timeline4.setOnFinished(t-> {
                 try {
-                    if (!bool_mute) game_media_player.dispose();
+                    //if (!bool_mute) mediaPlayer.dispose();
 
                     GameOver gameOver = (GameOver) load_fxml("Game_over.fxml");
                     gameOver.displayScore(copy_of_curr_score, get_profile().getHighScore());
@@ -186,12 +185,12 @@ public class StickController2 extends Menu implements Initializable {
     public void stickGrow(MouseEvent event){
         if (freq1==0)
         {
-            Thread new_t = new Thread(() -> play_sound_effects(stick_grow));
-            new_t.start();
+//            Thread new_t = new Thread(() -> play_sound_effects(stick_grow));
+//            new_t.start();
             System.out.println("GETX OF BLOCKAFTER BEFORE STICK GROW: " + blockAfter.getX());
             timeline1.play();
             freq1++;
-            timeline1.setOnFinished(event1 -> game_media_player.dispose());
+            //timeline1.setOnFinished(event1 -> mediaPlayer.dispose());
 
         }
     }
