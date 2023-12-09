@@ -52,18 +52,18 @@ public abstract class Menu {
 //        music_thread = t;
         this.mediaPlayer = mediaPlayer;
         this.bool_mute = bool_mute;
-        if( bool_mute)mute_image.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\mute.png"));
-        else mute_image.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\unmute.png"));
+        if( bool_mute)mute_image.setImage(new Image(Main.cwd + "mute.png"));
+        else mute_image.setImage(new Image(Main.cwd + "unmute.png"));
     }
     @FXML
     public void Mute(MouseEvent event){
         if (bool_mute) {//unmute here
-            mute_image.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\unmute.png"));
+            mute_image.setImage(new Image(Main.cwd + "unmute.png"));
             mediaPlayer.setVolume(0.1);
             bool_mute = false;
             return;
         }
-        mute_image.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\mute.png"));
+        mute_image.setImage(new Image(Main.cwd + "mute.png"));
         mediaPlayer.setVolume(0);
         bool_mute = true;
     }
@@ -72,13 +72,13 @@ public abstract class Menu {
         int r = random.nextInt(0,3);
         switch (r) {
             case 0:
-                bg.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\bg1.png"));
+                bg.setImage(new Image(Main.cwd + "bg1.png"));
                 break;
             case 1:
-                bg.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\bg2.png"));
+                bg.setImage(new Image(Main.cwd + "bg2.png"));
                 break;
             case 2:
-                bg.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\bg3.png"));
+                bg.setImage(new Image(Main.cwd + "bg3.png"));
                 break;
         }
     }
@@ -89,10 +89,10 @@ public abstract class Menu {
             FXMLLoader fxml_loader =  new FXMLLoader(getClass().getResource(fxml_name));
             Scene scene = new Scene( fxml_loader.load() );
 
-            if( bool_mute)mute_image.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\unmute.png"));
-            else mute_image.setImage(new Image("file:src\\main\\resources\\com\\example\\stick_hero\\mute.png"));
+            if( bool_mute)mute_image.setImage(new Image(Main.cwd + "unmute.png"));
+            else mute_image.setImage(new Image(Main.cwd + "mute.png"));
 
-            Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
+            Image icon = new Image(Main.cwd + "hero.png");
             Menu ss = fxml_loader.getController();
             ss.set_save_slot(save_slot);
             ss.set_profile(p);

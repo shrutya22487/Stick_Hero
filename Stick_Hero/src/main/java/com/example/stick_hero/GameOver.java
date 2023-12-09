@@ -16,6 +16,22 @@ public class GameOver extends Menu{
     @FXML
     Label cherry_count;
     @FXML
+    public void save_game() {
+        switch (this.save_slot) {
+            case 1:
+                System.out.println(get_profile().getCurr_score());
+                Profile.serializeProfile(get_profile(), "game_1.txt");
+                break;
+            case 2:
+                System.out.println(get_profile().getCurr_score());
+                Profile.serializeProfile(get_profile(), "game_2.txt");
+                break;
+            case 3:
+                Profile.serializeProfile(get_profile(), "game_3.txt");
+                break;
+        }
+    }
+    @FXML
     public void go_to_home(ActionEvent event) throws IOException {
         load_fxml("Start_screen.fxml");
     }
