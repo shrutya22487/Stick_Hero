@@ -1,6 +1,7 @@
 package com.example.stick_hero;
 
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import org.junit.Test;
 import javafx.scene.media.Media;
@@ -35,6 +36,15 @@ public class testing {
         real.setCurr_score(123);
         Profile.serializeProfile(real, "game_4.txt");
         assertEquals(real, Profile.deserializeProfile("game_4.txt"));
+    }
+
+    @Test
+    public void checkPlatformHeight() {
+        Rectangle r = new Rectangle();
+        r.setHeight(200);
+        r.setWidth(100);
+        Rectangle r1 = (new PlatForm(r)).getPlatformCurrent();
+        assertEquals(200, (int) r1.getHeight());
     }
 
 
