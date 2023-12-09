@@ -25,9 +25,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class StickController2 extends Menu implements Initializable {
-    Thread death_t;
-    String death = Main.cwd_music + "death.mp3" ;
-    String stick_grow = Main.cwd_music + "stick_grow.mp3";
+    private Thread death_t;
+    private String death = Main.cwd_music + "death.mp3" ;
+    private String stick_grow = Main.cwd_music + "stick_grow.mp3";
     MediaPlayer death_media_player , stick_grow_media_player ;
     Random r = new Random();
     int FLAGiNVERT=0;
@@ -58,7 +58,7 @@ public class StickController2 extends Menu implements Initializable {
     @Override
     public void Mute(MouseEvent event) {
         super.Mute(event);
-        if (!bool_mute){
+        if (!isBool_mute()){
             death_media_player.setVolume(1);
             stick_grow_media_player.setVolume(1);
             return;
@@ -211,7 +211,7 @@ public class StickController2 extends Menu implements Initializable {
         timeline3_2.setCycleCount(a);
         timeline3_2.play();
         timeline3_2.setOnFinished(e->{
-            if (!bool_mute) {
+            if (!isBool_mute()) {
                 death_t = new Thread(this::play_death_sound);
                 death_t.start();
                 try {
@@ -237,7 +237,7 @@ public class StickController2 extends Menu implements Initializable {
 
     public void stickGrow(MouseEvent event) throws InterruptedException {
         if (freq1==0)
-        {   if (!bool_mute) {
+        {   if (!isBool_mute()) {
             Thread new_t = new Thread(this::play_stick_grow_sound);
             new_t.start();
             new_t.join();

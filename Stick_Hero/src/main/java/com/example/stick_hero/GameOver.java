@@ -15,11 +15,20 @@ public class GameOver extends Menu{
     private Label currentScore;
     @FXML
     private Label BestScore;
+
+    public Label getCherry_count() {
+        return cherry_count;
+    }
+
+    public void setCherry_count(Label cherry_count) {
+        this.cherry_count = cherry_count;
+    }
+
     @FXML
-    Label cherry_count;
+    private Label cherry_count;
     @FXML
     public void save_game() {
-        switch (this.save_slot) {
+        switch (super.getSave_slot()) {
             case 1:
                 System.out.println(get_profile().getHighScore());
                 Profile.serializeProfile(get_profile(), "game_1.txt");

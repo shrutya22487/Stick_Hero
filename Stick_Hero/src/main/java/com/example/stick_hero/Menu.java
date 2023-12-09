@@ -16,17 +16,32 @@ import java.io.IOException;
 import java.util.Random;
 
 public abstract class Menu {
-    int save_slot;
+    public int getSave_slot() {
+        return save_slot;
+    }
+    public void setSave_slot(int save_slot) {
+        this.save_slot = save_slot;
+    }
+    private int save_slot;
     private Profile p;
     @FXML
-    ImageView bg;
+    private ImageView bg;
     @FXML
-    ImageView mute_image;
+    private ImageView mute_image;
     @FXML
-    Button mute;
+    private Button mute;
     @FXML
     Label cherry_count;
-    boolean bool_mute;
+
+    public boolean isBool_mute() {
+        return bool_mute;
+    }
+
+    public void setBool_mute(boolean bool_mute) {
+        this.bool_mute = bool_mute;
+    }
+
+    private boolean bool_mute;
     MediaPlayer mediaPlayer;
     public Profile get_profile() {
         return p;

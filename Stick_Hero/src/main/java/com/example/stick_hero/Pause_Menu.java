@@ -24,8 +24,8 @@ public class Pause_Menu extends Menu {
 
     @FXML
     public void save_game(ActionEvent event) {
-        System.out.println(this.save_slot);
-        switch (this.save_slot) {
+        System.out.println(this.getSave_slot());
+        switch (this.getSave_slot()) {
             case 1:
 //                System.out.println(get_profile().getCurr_score());
                 Profile.serializeProfile(get_profile(), "game_1.txt");
