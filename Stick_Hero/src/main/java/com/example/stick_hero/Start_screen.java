@@ -25,7 +25,15 @@ public class Start_screen extends Menu{
     @FXML
     public void run_game(ActionEvent event) throws IOException {
         StickController2 stickController2 = (StickController2) load_fxml("Game_screen2.fxml");
+        stickController2.curr_score.setText(String.valueOf(get_profile().getCurr_score()));
     }
+
+    @Override
+    public void go_back(ActionEvent event) throws IOException {
+        profile_select ps = (profile_select) load_fxml("profile_select.fxml");
+        ps.check_files();
+    }
+
     public void show_tutorial(ActionEvent event){
         // the labels for tutorials that are going to pop up
     }

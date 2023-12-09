@@ -1,5 +1,6 @@
 package com.example.stick_hero;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,7 +16,7 @@ import java.io.IOException;
 import java.util.Random;
 
 public abstract class Menu {
-    int best_score, curr_score = 0, cherries;
+    int save_slot;
     private Profile p;
     @FXML
     ImageView bg;
@@ -31,14 +32,17 @@ public abstract class Menu {
         return p;
     }
     public void increase_currscore(){
-        p.setCurr_score(++curr_score);
+        int currscore = p.getCurr_score();
+        p.setCurr_score(++currscore);
     }
+
     //Thread music_thread;
     public void set_profile(Profile p){
         this.p = p;
-        this.best_score = p.getCurr_score();
-        this.cherries = p.getCherries();
-        this.curr_score = p.getCurr_score();
+    }
+
+    public void set_save_slot(int save_slot) {
+        this.save_slot = save_slot;
     }
     public int get_cherries(){
         return p.getCherries();
@@ -90,6 +94,7 @@ public abstract class Menu {
 
             Image icon = new Image("file:src\\main\\resources\\com\\example\\stick_hero\\hero.png");
             Menu ss = fxml_loader.getController();
+            ss.set_save_slot(save_slot);
             ss.set_profile(p);
             ss.get_m_thread_reference(mediaPlayer, bool_mute);
             ss.random_background();
@@ -106,6 +111,10 @@ public abstract class Menu {
             e.printStackTrace();
         }
         return null;
+    }
+    @FXML
+    public void go_back(ActionEvent event) throws IOException{
+        //
     }
 
 }

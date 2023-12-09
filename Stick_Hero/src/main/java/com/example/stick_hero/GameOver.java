@@ -8,7 +8,6 @@ import javafx.scene.image.Image;
 import java.io.IOException;
 
 public class GameOver extends Menu{
-    private int best_score, curr_score;
     private Image home, restart;
     @FXML
     private Label currentScore;
@@ -19,13 +18,12 @@ public class GameOver extends Menu{
     @FXML
     public void go_to_home(ActionEvent event) throws IOException {
         load_fxml("Start_screen.fxml");
-
     }
     @FXML
     public void restart_game(ActionEvent event) throws IOException {
         load_fxml("Game_screen2.fxml");
     }
-    public void displayScore(){
+    public void displayScore(int curr_score, int best_score){
         currentScore.setText(String.valueOf(curr_score));
         BestScore.setText(String.valueOf(best_score));
     }

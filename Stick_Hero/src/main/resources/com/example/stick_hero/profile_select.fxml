@@ -5,33 +5,42 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="850.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.profile_select">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.profile_select">
     <children>
-        <ImageView fitHeight="970.0" fitWidth="722.0" layoutX="2.0" pickOnBounds="true" preserveRatio="true">
+      <Label fx:id="cherry_count" layoutX="725.0" layoutY="186.0" text="Label" />
+        <ImageView fx:id="bg" fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" smooth="false">
             <image>
                 <Image url="@bg2.png" />
             </image>
         </ImageView>
-        <Label layoutX="60.0" layoutY="54.0" prefHeight="218.0" prefWidth="608.0" text="STICK HERO">
+        <Label layoutX="96.0" layoutY="-24.0" prefHeight="218.0" prefWidth="608.0" text="STICK HERO">
             <font>
                 <Font name="Microsoft YaHei Bold" size="96.0" />
             </font>
         </Label>
-        <Button fx:id="button_profile_1" layoutX="201.0" layoutY="533.0" mnemonicParsing="false" onAction="#open_profile_1" prefHeight="133.0" prefWidth="338.0" styleClass="button5" stylesheets="@BeginingScreen.css" text="New Game">
+        <Button fx:id="button_profile_1" layoutX="281.0" layoutY="161.0" mnemonicParsing="false" onAction="#open_profile_1" prefHeight="66.0" prefWidth="237.0" styleClass="button5" stylesheets="@BeginingScreen.css" text="New Game">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Button>
-        <Button fx:id="button_profile_2" layoutX="201.0" layoutY="685.0" mnemonicParsing="false" prefHeight="126.0" prefWidth="338.0" stylesheets="@BeginingScreen.css" text="New Game">
+      <Button fx:id="button_profile_2" layoutX="281.0" layoutY="250.0" mnemonicParsing="false" onAction="#open_profile_2" prefHeight="66.0" prefWidth="237.0" styleClass="button5" stylesheets="@BeginingScreen.css" text="New Game">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="button_profile_3" layoutX="281.0" layoutY="341.0" mnemonicParsing="false" onAction="#open_profile_3" prefHeight="66.0" prefWidth="237.0" styleClass="button5" stylesheets="@BeginingScreen.css" text="New Game">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+        <Circle fill="#c41111" layoutX="755.0" layoutY="49.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" />
+        <ImageView fx:id="mute_image" fitHeight="60.0" fitWidth="60.0" layoutX="725.0" layoutY="20.0" onMouseClicked="#Mute" pickOnBounds="true" preserveRatio="true" />
+        <Button layoutX="14.0" layoutY="425.0" maxHeight="166.0" maxWidth="226.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#go_back" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #e10b0e; -fx-background-radius: 20;" text="&lt;" textFill="#faf6f6">
             <font>
-                <Font name="System Bold" size="18.0" />
-            </font>
-        </Button>
-        <Button fx:id="button_profile_3" layoutX="199.0" layoutY="837.0" mnemonicParsing="false" prefHeight="122.0" prefWidth="338.0" stylesheets="@BeginingScreen.css" text="New Game">
-            <font>
-                <Font name="System Bold" size="18.0" />
+                <Font name="Microsoft Sans Serif" size="31.0" />
             </font>
         </Button>
     </children>

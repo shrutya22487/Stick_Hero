@@ -2,15 +2,9 @@ package com.example.stick_hero;
 
 import javafx.animation.*;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Point3D;
-import javafx.scene.Group;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -20,10 +14,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
-import javafx.scene.transform.Rotate;
 import javafx.scene.transform.Translate;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.File;
@@ -32,8 +23,6 @@ import java.util.Random;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class StickController2 extends Menu implements Initializable {
     Thread death_t, walk_t, grow_t;
@@ -159,6 +148,7 @@ public class StickController2 extends Menu implements Initializable {
     public void runWin(){
         increase_currscore();
         curr_score.setText(String.valueOf(get_profile().getCurr_score()));
+        if (get_profile().getHighScore() < get_profile().getCurr_score()) get_profile().setHighScore(get_profile().getCurr_score());
 
         int a = (int) (blockAfter.getX()+blockAfter.getWidth()-blockPrevious.getWidth());
         timeline3_1.setCycleCount(a);
@@ -168,6 +158,8 @@ public class StickController2 extends Menu implements Initializable {
         });
     }
     public void runLoose() {
+        int copy_of_curr_score = get_profile().getCurr_score();
+        get_profile().setCurr_score(0);
         int a = (int) stick.getHeight() + 5;
         timeline3_2.setCycleCount(a);
         timeline3_2.play();
@@ -182,7 +174,7 @@ public class StickController2 extends Menu implements Initializable {
                     if (!bool_mute) game_media_player.dispose();
 
                     GameOver gameOver = (GameOver) load_fxml("Game_over.fxml");
-                    gameOver.displayScore();
+                    gameOver.displayScore(copy_of_curr_score, get_profile().getHighScore());
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }

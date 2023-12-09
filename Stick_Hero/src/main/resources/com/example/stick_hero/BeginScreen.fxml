@@ -10,6 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stick_hero.BeginScreen">
    <children>
+      <Label fx:id="cherry_count" layoutX="711.0" layoutY="226.0" text="Label" />
       <ImageView fx:id="bg" fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" smooth="false">
          <image>
             <Image url="@bg2.png" />

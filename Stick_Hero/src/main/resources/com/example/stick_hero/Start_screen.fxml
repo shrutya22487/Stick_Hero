@@ -17,13 +17,6 @@
             <Font name="Microsoft YaHei UI Bold" size="96.0" />
          </font>
       </Label>
-      <Button layoutX="180.0" layoutY="296.0" maxWidth="59.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="59.0" styleClass="button1" stylesheets="@GameStart.css" text="Button" />
-      <Button layoutX="180.0" layoutY="365.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="?">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Button>
-      <Button layoutX="180.0" layoutY="435.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="Volume" />
       <Button layoutX="546.0" layoutY="296.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="No Ads" />
       <Button layoutX="546.0" layoutY="365.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="Heroes" />
       <Button layoutX="546.0" layoutY="435.0" mnemonicParsing="false" styleClass="button1" stylesheets="@GameStart.css" text="Berries" />
@@ -51,5 +44,10 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
+      <Button layoutX="14.0" layoutY="425.0" maxHeight="166.0" maxWidth="226.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#go_back" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #e10b0e; -fx-background-radius: 20;" text="&lt;" textFill="#faf6f6">
+         <font>
+            <Font name="Microsoft Sans Serif" size="31.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

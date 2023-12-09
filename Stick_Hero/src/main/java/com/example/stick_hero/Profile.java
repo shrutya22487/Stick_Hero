@@ -5,12 +5,6 @@ public class Profile implements Serializable {
     private int cherries = 0;
     private int highScore = 0, curr_score = 0;
 
-    public void set_info(int cherries, int highScore, int curr_score) {
-        this.cherries = cherries;
-        this.highScore = highScore;
-        this.curr_score = curr_score;
-    }
-
     public int getCurr_score() {
         return curr_score;
     }
@@ -36,10 +30,11 @@ public class Profile implements Serializable {
         return highScore;
     }
 
-    public void serializeProfile(Profile p)
+    public static void serializeProfile(Profile p, String filename)
     {
         try{
-            FileOutputStream newFileOutput = new FileOutputStream("Profile.txt");
+            System.out.println(p.getCurr_score());
+            FileOutputStream newFileOutput = new FileOutputStream(filename);
             ObjectOutputStream o = new ObjectOutputStream(newFileOutput);
             o.writeObject(p);
             o.close();
@@ -49,10 +44,10 @@ public class Profile implements Serializable {
         }
     }
 
-    public Profile deserializeProfile(){
+    public static Profile deserializeProfile( String filename){
         Profile p = null;
         try{
-            FileInputStream newFileInput = new FileInputStream("Profile.txt");
+            FileInputStream newFileInput = new FileInputStream(filename);
             ObjectInputStream in = new ObjectInputStream(newFileInput);
             p = (Profile) in.readObject();
             in.close();
