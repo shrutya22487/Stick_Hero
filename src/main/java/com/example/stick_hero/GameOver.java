@@ -7,9 +7,9 @@ import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
-
+//death screen
 public class GameOver extends Menu{
-    private int temp_currscore;
+    private int temp_currscore;// to store the score after losing the game
     private Image home, restart;
     @FXML
     private Label currentScore;
@@ -26,6 +26,7 @@ public class GameOver extends Menu{
 
     @FXML
     private Label cherry_count;
+    //saves the game using serialization into 3 available slots
     @FXML
     public void save_game() {
         switch (super.getSave_slot()) {
@@ -58,7 +59,7 @@ public class GameOver extends Menu{
         BestScore.setText(String.valueOf(best_score));
     }
     @FXML
-    public void revive(ActionEvent event) throws IOException {
+    public void revive(ActionEvent event) throws IOException {   // deducts 2 cherries from the current amount of cherries and restarts the game
         if (get_cherries() >= 2) {
             get_profile().setCurr_score(temp_currscore);
             get_profile().setCherries(get_cherries() - 2);
@@ -67,5 +68,6 @@ public class GameOver extends Menu{
             stickController2.cherry_count.setText(String.valueOf(get_cherries()));
         }
     }
+
 
 }

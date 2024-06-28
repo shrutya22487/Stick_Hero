@@ -17,8 +17,8 @@ public class Main extends Application{
     public static String cwd_music =  String.valueOf(Paths.get("").toAbsolutePath()) + "\\src\\main\\resources\\" ;
 
     public static Stage stage;
-    MediaPlayer mediaPlayer;
-    public void music_player(){
+    MediaPlayer mediaPlayer;// a media player which is going to be passes onto each menu in a chain
+    public void music_player(){// music player for background music
         Media media = new Media(new File(cwd_music + "music.mp3").toURI().toString());
         mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);

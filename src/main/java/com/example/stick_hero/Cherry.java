@@ -18,7 +18,7 @@ public class Cherry {
     public ImageView getImageView() {
         return imageView;
     }
-    public Cherry(Rectangle prev, Rectangle after) {
+    public Cherry(Rectangle prev, Rectangle after) {//rendering the cherry at random points
         this.prev = prev;
         this.after = after;
         cherry = new Image("cherry.png");

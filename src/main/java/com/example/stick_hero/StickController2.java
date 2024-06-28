@@ -23,12 +23,12 @@ import java.util.Random;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
+// main screen
 public class StickController2 extends Menu implements Initializable {
     private Thread death_t;
     private String death = Main.cwd_music + "death.mp3" ;
     private String stick_grow = Main.cwd_music + "stick_grow.mp3";
-    MediaPlayer death_media_player , stick_grow_media_player ;
+    MediaPlayer death_media_player , stick_grow_media_player ;// media players for creating the death and stick growing voices
     Random r = new Random();
     int FLAGiNVERT=0;
     @FXML
@@ -192,7 +192,7 @@ public class StickController2 extends Menu implements Initializable {
         }));
     }
 
-    public void runWin(){
+    public void runWin(){// if the player has successfully created the stick of the sufficient length and the player can move forward
         increase_currscore();
         curr_score.setText(String.valueOf(get_profile().getCurr_score()));
         if (get_profile().getHighScore() < get_profile().getCurr_score()) get_profile().setHighScore(get_profile().getCurr_score());
@@ -204,7 +204,7 @@ public class StickController2 extends Menu implements Initializable {
             levelChange();
         });
     }
-    public void runLoose() {
+    public void runLoose() {// if the player has lost will initiate the death sequence
         int copy_of_curr_score = get_profile().getCurr_score();
         get_profile().setCurr_score(0);
         int a = (int) stick.getHeight() + 5;
@@ -235,7 +235,7 @@ public class StickController2 extends Menu implements Initializable {
 
     }
 
-    public void stickGrow(MouseEvent event) throws InterruptedException {
+    public void stickGrow(MouseEvent event) throws InterruptedException {// for growing the stick
         if (freq1==0)
         {   if (!isBool_mute()) {
             Thread new_t = new Thread(this::play_stick_grow_sound);
@@ -260,7 +260,7 @@ public class StickController2 extends Menu implements Initializable {
         this.imageView.setTranslateY(y);
     }
 
-    public void levelChange(){
+    public void levelChange(){// for bringing in a new block
         blockNew = new PlatForm(blockAfter).getPlatformCurrent();
         stickNew = (new Stick(blockAfter)).getStick();
         pane.getChildren().add(blockNew);
@@ -280,7 +280,11 @@ public class StickController2 extends Menu implements Initializable {
             pane.getChildren().add(cherry);
         });
     }
-    public void stickStop(MouseEvent event) throws IOException, InterruptedException {
+
+    //The function is activated when we release the mouse. The stick stops growing when we realease the mouse and with pivot at the stick base, it rotates
+    //and executes a full 90degree rotation. When we loose we die and when we win we move to the next function
+    public void stickStop(MouseEvent event) throws IOException, InterruptedException {// for stopping the growth of the stick once it has
+                                                                                      // reached the sufficient length
         if (freq2 == 0) {
             timeline1.stop();
             Point3D point = new Point3D(0, 0, stick.getHeight());
@@ -302,7 +306,7 @@ public class StickController2 extends Menu implements Initializable {
             freq2++;
         }
     }
-    public void screenClick(MouseEvent event){
+    public void screenClick(MouseEvent event){// for inverting the character after the mouse is pressed twice
 //        if (freq1>0 && freq2>0)
 //        {
 //            rotateTransition2 = new RotateTransition(Duration.millis(1), cherry);

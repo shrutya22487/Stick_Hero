@@ -8,7 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.media.MediaPlayer;
 
 import java.io.IOException;
-
+//Singleton class as only 1 begin screen can exist
 public class BeginScreen extends Menu {
     private static BeginScreen beginScreen= null;
 
@@ -19,7 +19,7 @@ public class BeginScreen extends Menu {
         if (beginScreen == null) beginScreen = new BeginScreen(profile);
         return beginScreen;
     }
-
+// creating a new profile
     @FXML
     public void new_game(ActionEvent event) throws IOException {
         this.set_profile(new Profile());
@@ -27,7 +27,7 @@ public class BeginScreen extends Menu {
         ps.check_files();
     }
 
-
+//choose a previously created/saved profile
     @FXML
     public void choose_profile(ActionEvent event) throws IOException {
         this.set_profile(new Profile());

@@ -17,6 +17,7 @@ public class testing {
     public void check_null_profile() {
         assertNotNull(BeginScreen.getInstance(new Profile()).get_profile());
     }
+    //checking if the profile has been created properly
 
     @Test
     public void check_fresh_game() {
@@ -30,7 +31,7 @@ public class testing {
     }
 
     @Test
-    public void check_Serialization() {
+    public void check_Serialization() {// check if the serialization has been done properly
         Profile real = new Profile();
         real.setCherries(3);
         real.setCurr_score(123);
@@ -39,7 +40,7 @@ public class testing {
     }
 
     @Test
-    public void checkPlatformHeight() {
+    public void checkPlatformHeight() {// check if the height of the rectangle created is created or not
         Rectangle r = new Rectangle();
         r.setHeight(200);
         r.setWidth(100);

@@ -4,7 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import java.io.IOException;
-
+//menu which gives the users the ability to buy more cherries
+//we have not implemented any option to use any other currency
 public class Buy_Berries extends Menu{
     @FXML
     public void buy_10_berries(ActionEvent event) throws IOException {

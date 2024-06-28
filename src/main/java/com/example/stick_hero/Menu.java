@@ -21,7 +21,7 @@ public abstract class Menu {
     }
     public void setSave_slot(int save_slot) {
         this.save_slot = save_slot;
-    }
+    }// in which slot the game is saved into
     private int save_slot;
     private Profile p;
     @FXML
@@ -33,7 +33,7 @@ public abstract class Menu {
     @FXML
     Label cherry_count;
 
-    public boolean isBool_mute() {
+    public boolean isBool_mute() {// is the game currently muted ?
         return bool_mute;
     }
 
@@ -46,7 +46,7 @@ public abstract class Menu {
     public Profile get_profile() {
         return p;
     }
-    public void increase_currscore(){
+    public void increase_currscore(){ //increases the current score by 1
         int currscore = p.getCurr_score();
         p.setCurr_score(++currscore);
     }
@@ -63,7 +63,7 @@ public abstract class Menu {
         return p.getCherries();
     }
 
-    public void get_m_thread_reference(MediaPlayer mediaPlayer, boolean bool_mute){
+    public void get_m_thread_reference(MediaPlayer mediaPlayer, boolean bool_mute){// function for passing the mediaplayer to each menu
 //        music_thread = t;
         this.mediaPlayer = mediaPlayer;
         this.bool_mute = bool_mute;
@@ -71,7 +71,7 @@ public abstract class Menu {
         else mute_image.setImage(new Image("unmute.png"));
     }
     @FXML
-    public void Mute(MouseEvent event){
+    public void Mute(MouseEvent event){    //muting the background music only
         if (bool_mute) {//unmute here
             mute_image.setImage(new Image("unmute.png"));
             mediaPlayer.setVolume(0.1);
@@ -82,7 +82,7 @@ public abstract class Menu {
         mediaPlayer.setVolume(0);
         bool_mute = true;
     }
-    public void random_background(){
+    public void random_background(){//choosing a random background each time a new background is loaded
         Random random = new Random();
         int r = random.nextInt(0,3);
         switch (r) {
@@ -98,7 +98,7 @@ public abstract class Menu {
         }
     }
 
-    public Menu load_fxml(String fxml_name) throws IOException {
+    public Menu load_fxml(String fxml_name) throws IOException {// loading a particular menu fxml
         try {
             Stage stage = Main.stage;
             FXMLLoader fxml_loader =  new FXMLLoader(getClass().getResource(fxml_name));

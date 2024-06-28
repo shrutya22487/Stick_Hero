@@ -6,7 +6,7 @@ public class Profile implements Serializable {
     private int cherries = 0;
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(Object obj) {// equals method for Junit testing
         if (obj != null && getClass() == obj.getClass()) if (this.curr_score == ((Profile) obj).getCurr_score() && this.highScore == ((Profile) obj).getHighScore() && this.cherries == ((Profile) obj).getCherries()) return true;
         return false;
     }
@@ -38,7 +38,7 @@ public class Profile implements Serializable {
         return highScore;
     }
 
-    public static void serializeProfile(Profile p, String filename)
+    public static void serializeProfile(Profile p, String filename)// serializing the profile
     {
         try{
             System.out.println(p.getCurr_score());
@@ -52,7 +52,7 @@ public class Profile implements Serializable {
         }
     }
 
-    public static Profile deserializeProfile( String filename){
+    public static Profile deserializeProfile( String filename){// deserializing the profile
         Profile p = null;
         try{
             FileInputStream newFileInput = new FileInputStream(filename);

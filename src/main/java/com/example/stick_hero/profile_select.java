@@ -19,7 +19,7 @@ public class profile_select extends Menu {
     @FXML
     Button button_profile_3;
     @FXML
-    public void open_profile_1(ActionEvent event) throws IOException {
+    public void open_profile_1(ActionEvent event) throws IOException {// opening the profile saved in slot 1
         File file = new File("game_1.txt");
         if (file.exists()) {
             this.set_save_slot(1);
@@ -33,7 +33,7 @@ public class profile_select extends Menu {
         }
     }
     @FXML
-    public  void open_profile_2(ActionEvent event) throws IOException {
+    public  void open_profile_2(ActionEvent event) throws IOException {// opening the profile saved in slot 2
         File file = new File("game_2.txt");
         if (file.exists()) {
             this.set_save_slot(2);
@@ -48,7 +48,7 @@ public class profile_select extends Menu {
     }
 
     @Override
-    public void go_back(ActionEvent event) throws IOException {
+    public void go_back(ActionEvent event) throws IOException {// go back to the starting screen
         this.set_profile(new Profile());
         Stage stage = Main.stage;
         FXMLLoader fxml_loader =  new FXMLLoader(getClass().getResource("BeginScreen.fxml"));
@@ -69,7 +69,7 @@ public class profile_select extends Menu {
     }
 
     @FXML
-    public  void open_profile_3(ActionEvent event) throws IOException {
+    public  void open_profile_3(ActionEvent event) throws IOException {// opening the profile saved in slot 3
         File file = new File("game_3.txt");
         if (file.exists()) {
             this.set_save_slot(3);
@@ -84,7 +84,7 @@ public class profile_select extends Menu {
     }
 
 
-    public void check_files(){
+    public void check_files(){  //function to the set the value of the labels if that particular saved slot is there
         File file = new File("game_1.txt");
         if (file.exists()) button_profile_1.setText("Game_1");
         else button_profile_1.setText("New Game");

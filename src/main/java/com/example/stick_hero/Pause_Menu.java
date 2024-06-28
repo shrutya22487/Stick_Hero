@@ -16,14 +16,14 @@ public class Pause_Menu extends Menu {
     Label best_score;
 
     @FXML
-    public void continue_game(ActionEvent event) throws IOException {
+    public void continue_game(ActionEvent event) throws IOException {// continue the game back from the current score and cherries
         StickController2 stickController2 = (StickController2) load_fxml("Game_screen2.fxml");
         stickController2.curr_score.setText(String.valueOf(get_profile().getCurr_score()));
         stickController2.cherry_count.setText(String.valueOf(get_cherries()));
     }
 
     @FXML
-    public void save_game(ActionEvent event) {
+    public void save_game(ActionEvent event) {// serialize the profile
         System.out.println(this.getSave_slot());
         switch (this.getSave_slot()) {
             case 1:
