@@ -12,6 +12,11 @@
 
 Welcome to Stick Hero, an exciting platformer game where you control Stick-Hero, navigating between pillars by extending a stick. Your objective is to collect cherries, reach the destination, and achieve the highest score possible. Embrace the challenge and enjoy the thrilling gameplay!
 
+## 🎥 Demo
+
+Check out our demo video on YouTube to see the Maze Solver in action: [Watch the demo](https://www.youtube.com/watch?v=YRQl11XkDFo)
+
+
 ## Gameplay Showcase
 
 ### Images
